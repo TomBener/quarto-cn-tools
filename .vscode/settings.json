@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.md": "quarto",
+        "README.md": "markdown"
+    }
+}

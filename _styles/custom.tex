@@ -1,0 +1,49 @@
+\usepackage[zihao=-4,linespread=1.5]{ctex}
+
+\setmainfont{Times New Roman}
+\setCJKmainfont[AutoFakeBold=5,  % 伪粗体
+    % ItalicFont=KaiTi,  % 中易楷体
+    % ]{FangSong}  % 中易仿宋
+    ]{SimSun} % 华文宋体
+
+% Define HUGE font size for the title
+\makeatletter
+\newcommand\HUGE{\@setfontsize\Huge{36}{44}}
+\makeatother
+
+% Change page label for cover page
+\newcommand{\CoverName}{Cover}
+
+% Add space between Chinese characters
+\newcommand{\cnspace}[2]{\ziju{#1}#2}
+
+% Redefine the font size of the quote environment
+\let\oldquote\quote\renewcommand\quote{\oldquote\zihao{5}}
+
+% TOC style
+\usepackage[titles]{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+% \setlength{\cftbeforesecskip}{5pt}
+
+% Footer style
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[C]{\footnotesize\selectfont\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}}
+\pagestyle{plain}
+\setlength{\footskip}{1.5cm}
+
+% Define the color of hyperlinks
+\definecolor{urlblue}{rgb}{0.19,0.54,0.92}
+\definecolor{winered}{rgb}{0.5,0,0}
+\definecolor{wordblue}{RGB}{40,85,150}
+
+% Define replacements for Chinese quotation marks
+\usepackage{newunicodechar}
+\newunicodechar{«}{“}
+\newunicodechar{»}{”}
+\newunicodechar{‹}{‘}
+\newunicodechar{›}{’}
+

@@ -1,0 +1,16 @@
+$if(toc)$
+$if(toc-title)$
+\renewcommand{\contentsname}{\centering\LARGE\cnspace{0.5}{$toc-title$}}
+$endif$
+{
+$if(colorlinks)$
+\hypersetup{linkcolor=$if(toccolor)$$toccolor$$else$$endif$}
+$endif$
+\setcounter{tocdepth}{$toc-depth$}
+\pdfbookmark[1]{$toc-title$}{toc}
+\tableofcontents
+\addtocontents{toc}{\vspace{10pt}}
+}
+\vspace{1cm}
+
+$endif$

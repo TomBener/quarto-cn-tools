@@ -1,0 +1,24 @@
+title: Confetti
+author: Bréant Arthur
+version: 1.0.0
+quarto-required: ">=1.2.269"
+contributes:
+  revealjs-plugins:
+    - name: RevealConfetti
+      script:
+        - confetti.js
+      config:
+        confetti:
+          particleCount: 150
+          angle: 90
+          spread: 360
+          startVelocity: 25
+          decay: 0.9
+          gravity: 0.65
+          drift: 0
+          ticks: 400
+          colors: ["#0366fc", "#f54281", "#1fd14f"]
+          shapes: null
+          scalar: 0.7
+          zIndex: 100
+          disableForReducedMotion: false

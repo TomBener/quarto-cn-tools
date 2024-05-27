@@ -1,0 +1,53 @@
+\begin{titlepage}
+\hypertarget{cover}{}
+\pdfbookmark[1]{封面}{cover}
+
+\renewcommand{\thepage}{\CoverName}
+\begin{center}
+  % The sum of all minipages and spaces should not exceed \textwidth
+  \begin{minipage}{0.12\textwidth}
+    \includegraphics[width=\linewidth]{figures/logo.pdf}
+  \end{minipage}% <- Important to comment out this line end to avoid spaces
+  \hspace{0.01\textwidth} % Horizontal spacing
+  \begin{minipage}{0.25\textwidth}
+    \includegraphics[width=\linewidth]{figures/title.pdf}
+  \end{minipage}%
+  \hspace{0.01\textwidth}
+  \begin{minipage}{0.5\textwidth}
+    \HUGE \lishu \textbf{$institute$}
+  \end{minipage}
+
+\vspace{10pt}
+
+\zihao{1} \songti \textbf{$subtitle$}
+
+\vspace{4cm}
+
+\begin{table}[ht]
+    \centering
+    \zihao{4}
+    \setlength{\tabcolsep}{1mm}
+    \begin{tabular}{cc}
+      \textbf{\cnspace{1.5}{题目}} & $title$ \\ [-22pt]
+       & \rule{13cm}{1pt} \\ [45pt]
+
+      \textbf{\cnspace{1.5}{姓名}} & \cnspace{0.5}{$author$} \\ [-22pt]
+       & \rule{13cm}{1pt} \\ [45pt]
+
+      \textbf{\cnspace{1.5}{学号}} & $student-id$ \\ [-22pt]
+       & \rule{13cm}{1pt} \\ [45pt]
+
+      \textbf{\cnspace{1.5}{导师}} & $supervisor$ \\ [-22pt]
+       & \rule{13cm}{1pt} \\ [45pt]
+
+      \textbf{\cnspace{1.5}{专业}} & \cnspace{0.5}{$major$} \\ [-22pt]
+       & \rule{13cm}{1pt}
+      \end{tabular}
+\end{table}
+
+\vfill
+
+{\zihao{4} \bfseries 提交日期：\today}
+
+\end{center}
+\end{titlepage}

@@ -1,0 +1,124 @@
+title: 用 Quarto 写作中文学术论文
+subtitle: 一个简单的示例
+author:
+  name: Tom Ben
+  email: email@example.edu
+student-id: 1234567890
+supervisor: 导师姓名
+institute: 学校名称
+major: 专业名称
+date-format: "YYYY年M月D日"
+project:
+  output-dir: outputs
+number-sections: true
+link-citations: true
+toc: true
+toc-depth: 4  # `3` is enouth, `4` is set as `shift-heading-level-by: 1` is enabled for html
+toc-title: 目录
+crossref:
+  fig-title: 图
+  tbl-title: 表
+  fig-prefix: 图
+  tbl-prefix: 表
+reference-section-title: 参考文献
+bibliography: bibliography.bib
+csl: _styles/gb-author-date.csl  # Author-year style, `gb-numeric.csl` for numeric style
+nocite: '@*'
+filters:
+  - links-to-citations
+  - ignore-softbreaks
+execute:
+  cache: true
+  freeze: auto
+  echo: false
+  warning: false
+
+format:
+  docx:
+    reference-doc: _styles/custom.docx
+    filters:
+      - remove-spaces
+      - docx-quotes
+    date: today
+
+  html:
+    template: _styles/html5.html
+    date: 2024-05-26
+    date-modified: today
+    theme:
+      light: [flatly, _styles/custom.scss]
+      dark: [darkly, _styles/custom.scss]
+    shift-heading-level-by: 1
+    title-block-style: manuscript
+    title-block-banner: true
+    link-external-icon: true
+    link-external-newwindow: true
+    lightbox: true
+    language:
+      title-block-author-single: 作者
+      title-block-affiliation-single: 学校
+      title-block-published: 发布于
+      title-block-modified: 更新于
+      section-title-footnotes: 脚注
+      related-formats-title: 其他格式
+
+  pdf:
+    filters:
+      - latex-quotes
+    fig-width: 7
+    fig-height: 4.8
+    include-in-header:
+      - _styles/custom.tex
+    template-partials:
+      - _styles/title.tex
+      - _styles/before-body.tex
+      - _styles/toc.tex
+      - _styles/biblio.tex
+    indent: true
+    papersize: a4
+    twoside: true
+    geometry: [margin=2.5cm]
+    pagestyle: plain
+    linkcolor: winered
+    citecolor: winered
+    urlcolor: urlblue
+    toccolor: wordblue
+    cite-method: biblatex
+    biblio-style: gb7714-2015ay  # Author-year style, `gb7714-2015` for numeric style
+    biblatexoptions:
+      - backend=biber
+      - backref=true
+      - dashed=false  # Do not replace repeated author names with a dash
+      - gblabelref=false  # Disable hyperlink for author names
+      - gblanorder=englishahead # English first
+      - gbnamefmt=lowercase  # Disable uppercase name
+      - gbfieldtype=true  # Enable field type for theses
+      # - gbalign=gb7714-2015  # Add numeric label, redundant for author-year style
+      # - autocite=plain  # Add bracket squares in citiations for numeric style
+
+  revealjs:
+    template: _styles/revealjs.html
+    theme: _styles/metropolis.scss
+    output-file: slides.html
+    logo: figures/logo.png
+    citeproc: false
+    toc-depth: 1
+    menu: false
+    scrollable: true
+    slide-number: true
+    number-sections: false
+    chalkboard:
+      buttons: false
+    # width: 1280
+    # height: 800
+    pdf-separate-fragments: true
+    include-in-header:
+      - text: |
+          <style>
+          .reveal .slide-logo {
+            max-height: unset;
+            height: 50px;
+          }
+          </style>
+    revealjs-plugins:
+      - confetti
