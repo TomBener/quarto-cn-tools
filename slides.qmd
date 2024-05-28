@@ -336,23 +336,6 @@ knitr::kable(mtcars)
 Learn more: [Tabsets](https://quarto.org/docs/presentations/revealjs/#tabsets)
 :::
 
-## Interactive Slides {.smaller transition="slide"}
-
-Include Jupyter widgets and htmlwidgets in your presentations
-
-```{r}
-#| echo: false
-#| fig-height: 5
-library(leaflet)
-leaflet() %>%
-  addTiles() %>%  # Add default OpenStreetMap map tiles
-  addMarkers(lng=174.768, lat=-36.852, popup="The birthplace of R")
-```
-
-::: footer
-Learn more: [Jupyter widgets](https://quarto.org/docs/interactive/widgets/jupyter.html), [htmlwidgets](https://quarto.org/docs/interactive/widgets/htmlwidgets.html)
-:::
-
 ## Preview Links
 
 Navigate to hyperlinks without disrupting the flow of your presentation.

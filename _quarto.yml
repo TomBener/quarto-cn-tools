@@ -5,7 +5,7 @@ author:
   email: email@example.edu
 student-id: 1234567890
 supervisor: 导师姓名
-institute: 学校名称
+institute: 所在学校名称
 major: 专业名称
 date-format: "YYYY年M月D日"
 project:
@@ -101,7 +101,7 @@ format:
     template: _styles/revealjs.html
     theme: _styles/metropolis.scss
     output-file: slides.html
-    logo: figures/logo.png
+    logo: figures/logo.svg
     citeproc: false
     toc-depth: 1
     menu: false
