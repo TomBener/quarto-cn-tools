@@ -22,8 +22,6 @@ Backup of *.doc*
 /*.tex
 /*.html
 
-figures/
-
 # Plist fils by Ulysses
 *.plist
 .Ulysses-ActivityHistory/

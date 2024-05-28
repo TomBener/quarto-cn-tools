@@ -1,3 +1,7 @@
+::: {.callout-tip title="项目地址"}
+<https://github.com/TomBener/quarto-cn-tools>
+:::
+
 # 前言
 
 学术论文写作，是科研工作的核心环节。
