@@ -23,14 +23,15 @@ crossref:
 reference-section-title: 参考文献
 bibliography: bibliography.bib
 csl: _styles/gb-author-date.csl  # Author-year style, `gb-numeric.csl` for numeric style
-nocite: '@*'
+nocite: |
+  @*
 filters:
   - links-to-citations
   - ignore-softbreaks
 execute:
   cache: true
   freeze: auto
-  echo: false
+  echo: true
   warning: false
 
 format:

@@ -32,6 +32,23 @@ Word 却并不是最适合学术论文写作的工具。
 可视化编辑等，是学术写作的理想工具
 [@tenen2014]。
 
+```{r}
+#| fig-cap: 在 Quarto 中使用 R 绘图
+#| code-fold: true
+#| code-line-numbers: true
+
+library(ggplot2)
+mtcars2 <- mtcars
+mtcars2$am <- factor(
+    mtcars$am,
+    labels = c("automatic", "manual")
+)
+ggplot(mtcars2, aes(hp, mpg, color = am)) +
+    geom_point() +
+    geom_smooth() +
+    theme(legend.position = "bottom")
+```
+
 不论是 LaTeX、Markdown、Pandoc 还是 Quarto，
 都是基于英语写作的写作工具，对于中文写作者来说，
 这些工具的中文支持并不是很好，比如中文自由换行、

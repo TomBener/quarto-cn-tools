@@ -1,8 +1,8 @@
 # 中西文盘古之白
 
-[中文文案排版指北][1] 中提到：
+[pangu.js][1] 中提到：
 
-[1]: https://github.com/sparanoid/chinese-copywriting-guidelines
+[1]: https://github.com/vinta/pangu.js
 
 > 有研究显示，打字的时候不喜欢在中文和英文之间加空格的人，
 > 感情路都走得很辛苦，有七成的比例会在 34 岁的时候跟自己不爱的人结婚，
