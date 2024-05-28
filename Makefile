@@ -1,12 +1,17 @@
-# `make citebib`: Extract all bibliographies cited as BibLaTeX
-# `make` or `make all`: Render DOCX, HTML, PDF and Reveal.js slides at once
-# `make print`: Render PDF for print
-# `make watermark`: Render PDF with watermark
-# `make clean`: Remove auxiliary and output files
+# `make` or `make all`: Render DOCX, HTML, PDF, ePub and Reveal.js slides at once.
+# `make docx`: Render DOCX.
+# `make html`: Render HTML.
+# `make pdf`: Render PDF.
+# `make epub`: Render ePub.
+# `make slides`: Render Reveal.js slides.
+# `make print`: Render PDF for print.
+# `make watermark`: Render PDF with watermark.
+# `make citebib`: Extract all bibliographies cited as BibLaTeX file `citebib.bib`.
+# `make clean`: Remove auxiliary and output files.
 
-# Render DOCX, HTML, PDF and Reveal.js slides
+# Render DOCX, HTML, PDF, ePub and Reveal.js slides at once
 .PHONY: all
-all: docx html pdf slides
+all: docx html pdf epub slides
 
 # Pandoc command for extracting bibliographies
 CITE := @pandoc \
@@ -49,7 +54,7 @@ PDF_OUTPUT := index.pdf
 
 # Special handling for print PDF
 .PHONY: print
-print: PDF_OPTION := -V draft -M biblatexoptions="backend=biber,backref=false,dashed=false,\
+print: PDF_OPTION := -V draft -M biblatexoptions="backend=biber,backref=false,dashed=false, \
 gblabelref=false,gblanorder=englishahead,gbnamefmt=lowercase,gbfieldtype=true,doi=false"
 print: PDF_OUTPUT := print.pdf
 print: pdf
@@ -59,6 +64,11 @@ print: pdf
 watermark: PDF_OPTION := -V watermark=true
 watermark: PDF_OUTPUT := watermark.pdf
 watermark: pdf
+
+# Render ePub
+epub: dependencies
+	$(QUARTO) $@ -L _extensions/localize-cnbib.lua -L _extensions/bib-quotes.lua \
+	--filter _extensions/sort-cnbib.py --filter _extensions/auto-correct.py
 
 # Render Reveal.js slides
 slides: dependencies

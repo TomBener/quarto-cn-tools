@@ -94,6 +94,10 @@ format:
       # - gbalign=gb7714-2015  # Add numeric label, redundant for author-year style
       # - autocite=plain  # Add bracket squares in citiations for numeric style
 
+  epub:
+    epub-cover-image: figures/cover.png
+    rights: © 2024 Tom Ben
+
   revealjs:
     template: _styles/revealjs.html
     theme: _styles/metropolis.scss

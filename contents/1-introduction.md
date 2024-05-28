@@ -28,7 +28,7 @@ Word 却并不是最适合学术论文写作的工具。
 在 [Pandoc](https://pandoc.org)
 [@macfarlane2024]
 的加持下，Markdown 可以输出多种格式的文档，
-例如 Word、HTML、LaTeX、PDF、EPUB 等。
+例如 Word、HTML、LaTeX、PDF、ePub 等。
 基于 Pandoc 开发的 [Quarto](https://quarto.org)
 [@allaire2024]，
 不仅能够直接在论文中运行 Python、R 等代码，

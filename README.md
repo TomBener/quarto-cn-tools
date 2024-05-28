@@ -4,14 +4,15 @@
 
 This repository provides a comprehensive guide and toolset for writing academic
 papers in Chinese, such as the localization and sorting of Chinese
-bibliographies, conversion of quotes, and adding space between Chinese and
-English Characters. With the help of these templates and scripts, you can write
-your academic papers in Markdown, and convert them into various formats like
-Word, HTML, LaTeX, PDF, and EPUB via Quarto.
+bibliographies, conversion of Chinese quotes, and correcting spaces between
+Chinese and English characters. With the help of these templates and scripts,
+you can write your academic papers in Markdown, and convert them into various
+formats like Word, HTML, LaTeX, PDF, and ePub via Quarto with ease.
 
 ## Prerequisites
 
-- [Quarto](https://quarto.org), with [Pandoc](https://pandoc.org) included, and you can install TinyTeX via `quarto install tinytex --update-path`.
+- [Quarto](https://quarto.org), with [Pandoc](https://pandoc.org) included, and
+  you can install TinyTeX via `quarto install tinytex --update-path`.
 - Python, and the following packages:
   - [autocorrect_py](https://github.com/huacnlee/autocorrect/tree/main/autocorrect-py)
   - [pypinyin](https://github.com/mozillazg/python-pinyin)
@@ -25,14 +26,15 @@ Word, HTML, LaTeX, PDF, and EPUB via Quarto.
 
 This project uses a Makefile to manage the build process. Here are the available commands:
 
-- `make citebib`: Extract all bibliographies cited as BibLaTeX file `citebib.bib`.
+- `make` or `make all`: Render DOCX, HTML, PDF, ePub and Reveal.js slides at once.
 - `make docx`: Render DOCX.
 - `make html`: Render HTML.
 - `make pdf`: Render PDF.
+- `make epub`: Render ePub.
 - `make slides`: Render Reveal.js slides.
-- `make` or `make all`: Render DOCX, HTML, PDF and Reveal.js slides at once.
 - `make print`: Render PDF for print.
 - `make watermark`: Render PDF with watermark.
+- `make citebib`: Extract all bibliographies cited as BibLaTeX file `citebib.bib`.
 - `make clean`: Remove auxiliary and output files.
 
 ## License

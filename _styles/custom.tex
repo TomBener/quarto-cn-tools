@@ -48,3 +48,13 @@
 \newunicodechar{‹}{‘}
 \newunicodechar{›}{’}
 
+% Avoid overflow of the code block
+\usepackage{fvextra}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+\RecustomVerbatimEnvironment{verbatim}{Verbatim}{
+      showspaces = false,
+      showtabs = false,
+      breaksymbolleft={},
+      breaklines
+    }
+
