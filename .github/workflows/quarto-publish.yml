@@ -33,7 +33,7 @@ jobs:
       - name: Setup R dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          extra-packages: |
+          packages: |
             knitr
             rmarkdown
             ggplot2
