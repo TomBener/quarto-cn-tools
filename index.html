@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN" xml:lang="zh-CN"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Tom Ben">
+
+<title>用 Quarto 写作中文学术论文</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/quarto.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="index_files/libs/quarto-html/anchor.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="index_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="index_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="index_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="index_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">用 Quarto 写作中文学术论文</h1>
+            <p class="subtitle lead">一个简单的示例</p>
+          </div>
+
+    
+    <div class="quarto-title-meta-container">
+      <div class="quarto-title-meta-column-start">
+            <div class="quarto-title-meta-author">
+          <div class="quarto-title-meta-heading">作者</div>
+          <div class="quarto-title-meta-heading">学校</div>
+          
+                <div class="quarto-title-meta-contents">
+            <p class="author">Tom Ben <a href="mailto:email@example.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+          </div>
+                <div class="quarto-title-meta-contents">
+                    <p class="affiliation">
+                        所在学校名称
+                      </p>
+                  </div>
+                    </div>
+        
+        <div class="quarto-title-meta">
+
+                      
+                <div>
+            <div class="quarto-title-meta-heading">发布于</div>
+            <div class="quarto-title-meta-contents">
+              <p class="date">2024 年 5 月 26 日</p>
+            </div>
+          </div>
+          
+                <div>
+            <div class="quarto-title-meta-heading">更新于</div>
+            <div class="quarto-title-meta-contents">
+              <p class="date-modified">2024 年 5 月 28 日</p>
+            </div>
+          </div>
+                
+              </div>
+      </div>
+      <div class="quarto-title-meta-column-end quarto-other-formats-target">
+      <div class="quarto-alternate-formats"><div class="quarto-title-meta-heading">其他格式</div><div class="quarto-title-meta-contents"><p><a href="index.docx"><i class="bi bi-file-word"></i>MS Word</a></p></div><div class="quarto-title-meta-contents"><p><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></p></div><div class="quarto-title-meta-contents"><p><a href="slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></p></div></div></div>
+    </div>
+
+
+
+    <div class="quarto-other-links-text-target">
+    </div>  </div>
+</header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目录</h2>
+   
+  <ul>
+  <li><a href="#前言" id="toc-前言" class="nav-link active" data-scroll-target="#前言"><span class="header-section-number">1</span> 前言</a></li>
+  <li><a href="#参考文献本地化" id="toc-参考文献本地化" class="nav-link" data-scroll-target="#参考文献本地化"><span class="header-section-number">2</span> 参考文献本地化</a>
+  <ul>
+  <li><a href="#et-al.替换为等" id="toc-et-al.替换为等" class="nav-link" data-scroll-target="#et-al.替换为等"><span class="header-section-number">2.1</span> 「et al.」替换为「等」</a></li>
+  <li><a href="#vol.替换为第x卷" id="toc-vol.替换为第x卷" class="nav-link" data-scroll-target="#vol.替换为第x卷"><span class="header-section-number">2.2</span> 「vol.」替换为「第 X 卷」</a></li>
+  <li><a href="#ed.和eds.替换为编" id="toc-ed.和eds.替换为编" class="nav-link" data-scroll-target="#ed.和eds.替换为编"><span class="header-section-number">2.3</span> 「ed.」和「eds.」替换为「编」</a></li>
+  <li><a href="#ed.替换为编或第x版" id="toc-ed.替换为编或第x版" class="nav-link" data-scroll-target="#ed.替换为编或第x版"><span class="header-section-number">2.4</span> 「ed.」替换为「编」或「第 X 版」</a></li>
+  <li><a href="#tran.和trans.替换为译" id="toc-tran.和trans.替换为译" class="nav-link" data-scroll-target="#tran.和trans.替换为译"><span class="header-section-number">2.5</span> 「tran.」和「trans.」替换为「译」</a></li>
+  </ul></li>
+  <li><a href="#中文参考文献按照拼音排序" id="toc-中文参考文献按照拼音排序" class="nav-link" data-scroll-target="#中文参考文献按照拼音排序"><span class="header-section-number">3</span> 中文参考文献按照拼音排序</a></li>
+  <li><a href="#中文引号的处理" id="toc-中文引号的处理" class="nav-link" data-scroll-target="#中文引号的处理"><span class="header-section-number">4</span> 中文引号的处理</a></li>
+  <li><a href="#中西文盘古之白" id="toc-中西文盘古之白" class="nav-link" data-scroll-target="#中西文盘古之白"><span class="header-section-number">5</span> 中西文盘古之白</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">参考文献</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+  
+
+
+<!-- Include Quarto files -->
+<div class="callout callout-style-default callout-tip callout-titled" title="项目地址">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+项目地址
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://github.com/TomBener/quarto-cn-tools" class="uri">https://github.com/TomBener/quarto-cn-tools</a></p>
+</div>
+</div>
+<section id="前言" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="前言"><span class="header-section-number">1</span> 前言</h2>
+<p>学术论文写作，是科研工作的核心环节。写好一篇学术论文，不仅需要有大量的文献阅读、扎实的实证研究，还需要有清晰的逻辑思维、精准的表达能力。除此之外，「用什么工具写」也是一个非常重要的问题。在绝大多数情况下，学术论文的写作工具是 <a href="https://microsoft.com/en-us/microsoft-365/word">Microsoft Word</a>，无论是学术期刊、学位论文、还是科研项目报告，Word 似乎都是不假思索的首选项。然而，作为一款文字处理软件，Word 却并不是最适合学术论文写作的工具。尤其是在参考文献管理、公式编辑、版本控制等方面。在理工科领域，<a href="https://latex-project.org">LaTeX</a> 是一种非常流行的学术论文写作工具。与 Word 不同，LaTeX 是一种排版系统，而不是所见即所得的文字处理软件，尽管它的排版效果非常出色，但学习曲线也相对陡峭。</p>
+<p>在学术论文写作方面，Word 使用体验较差，LaTeX 学习曲线陡峭，这两者似乎都不是完美的选择。有没有一种既易于上手，又能够满足学术论文写作需求的工具呢？答案是肯定的，这个工具就是 <a href="https://daringfireball.net/projects/markdown">Markdown</a>。作为一种轻量级标记语言，Markdown 的语法简单、易读易写。使用 Markdown 写作，不需要关心排版样式，只需要关注写作内容本身，在 <a href="https://pandoc.org">Pandoc</a> <span id="cite_2"><span class="citation" data-cites="macfarlane2024">(<a href="#ref-macfarlane2024" role="doc-biblioref">MacFarlane&nbsp;et al., 2024</a>)</span></span> 的加持下，Markdown 可以输出多种格式的文档，例如 Word、HTML、LaTeX、PDF、EPUB 等。基于 Pandoc 开发的 <a href="https://quarto.org">Quarto</a> <span id="cite_3"><span class="citation" data-cites="allaire2024">(<a href="#ref-allaire2024" role="doc-biblioref">Allaire&nbsp;et al., 2024</a>)</span></span>，不仅能够直接在论文中运行 Python、R 等代码，还增加了很多学术写作的实用功能，例如交叉引用、参考文献预览、可视化编辑等，是学术写作的理想工具 <span id="cite_4"><span class="citation" data-cites="tenen2014">(<a href="#ref-tenen2014" role="doc-biblioref">Tenen&nbsp;et al., 2014</a>)</span></span>。</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>mtcars2 <span class="ot">&lt;-</span> mtcars</span>
+<span id="cb1-3"><a href="#cb1-3"></a>mtcars2<span class="sc">$</span>am <span class="ot">&lt;-</span> <span class="fu">factor</span>(</span>
+<span id="cb1-4"><a href="#cb1-4"></a>    mtcars<span class="sc">$</span>am,</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"automatic"</span>, <span class="st">"manual"</span>)</span>
+<span id="cb1-6"><a href="#cb1-6"></a>)</span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="fu">ggplot</span>(mtcars2, <span class="fu">aes</span>(hp, mpg, <span class="at">color =</span> am)) <span class="sc">+</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="index_files/figure-html/unnamed-chunk-1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="在 Quarto 中使用 R 绘图"><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672" alt="在 Quarto 中使用 R 绘图"></a></p>
+<figcaption>在 Quarto 中使用 R 绘图</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>不论是 LaTeX、Markdown、Pandoc 还是 Quarto，都是基于英语写作的写作工具，对于中文写作者来说，这些工具的中文支持并不是很好，比如中文自由换行、中西文引号、中英文空格、中文按拼音排序等问题，都需要额外的配置和处理。</p>
+<p>本项目的目标，就是基于 Pandoc 和 Quarto，提供一套完整的 Markdown 学术写作方案，解决中文写作者在使用 Markdown 写作时遇到的各种问题，包括中文引号处理、中西文自动添加空格、参考文献列表按拼音排序（包括多音字）、中文参考文献本地化等。输出为格式完美的 Word、HTML、PDF 等格式。</p>
+</section>
+<section id="参考文献本地化" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="参考文献本地化"><span class="header-section-number">2</span> 参考文献本地化</h2>
+<p>Pandoc 使用 CSL (Citation Style Language) 来格式化参考文献信息，然而 CSL 不支持多语言的参考文献格式化，例如在 Pandoc 中将语言设置为 <code>en-US</code> 时，所以文献的本地化字符都会被转换为英文，例如 <code>et al.</code>、<code>vol.</code>、<code>ed.</code> 等。</p>
+<p>本项目使用 Lua filter <code>localiz-cnbib.lua</code> 来解决这个问题。</p>
+<section id="et-al.替换为等" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="et-al.替换为等"><span class="header-section-number">2.1</span> 「et al.」替换为「等」</h3>
+<p>在 author-date 样式中，正文中超过一个作者时，只显示第一作者，英文文献后用 <code>et al.</code> 表示 <span id="cite_5"><span class="citation" data-cites="acemoglu2019 gao2023a pang2004 krewinkel2017 flint2018">(<a href="#ref-acemoglu2019" role="doc-biblioref">Acemoglu&nbsp;et al., 2019</a>; <a href="#ref-gao2023a" role="doc-biblioref">Gao&nbsp;et al., 2023</a>; <a href="#ref-pang2004" role="doc-biblioref">Pang&nbsp;et al., 2004</a>; <a href="#ref-krewinkel2017" role="doc-biblioref">Krewinkel&nbsp;et al., 2017</a>; <a href="#ref-flint2018" role="doc-biblioref">Flint&nbsp;et al., 2018</a>)</span></span>。对于中文文献，<code>et al.</code> 则应该替换为 <code>等</code> <span id="cite_6"><span class="citation" data-cites="qinhui2019 yishabai2018 jiazhen1979 zhaojizhi2024">(<a href="#ref-qinhui2019" role="doc-biblioref">秦晖&nbsp;等, 2019</a>; <a href="#ref-yishabai2018" role="doc-biblioref">伊莎白&nbsp;等, 2018</a>; <a href="#ref-jiazhen1979" role="doc-biblioref">賈禎&nbsp;等, 1979</a>; <a href="#ref-zhaojizhi2024" role="doc-biblioref">赵继之&nbsp;等, 2024</a>)</span></span>。</p>
+<p>对于参考文献表来说，超过 3 个作者时，也应该使用 <code>et al.</code> 或 <code>等</code> 来表示 <span id="cite_7"><span class="citation" data-cites="lushaowei2015 yang2023e">(<a href="#ref-lushaowei2015" role="doc-biblioref">卢少微&nbsp;等, 2015</a>; <a href="#ref-yang2023e" role="doc-biblioref">Yang&nbsp;et al., 2023</a>)</span></span>，以及更多例子 <span id="cite_8"><span class="citation" data-cites="acemoglu2019 geyanfeng2020 caojingjing2020 amarante2022 daviet2022">(<a href="#ref-acemoglu2019" role="doc-biblioref">Acemoglu&nbsp;et al., 2019</a>; <a href="#ref-geyanfeng2020" role="doc-biblioref">葛延风&nbsp;等, 2020</a>; <a href="#ref-caojingjing2020" role="doc-biblioref">曹晶晶&nbsp;等, 2020</a>; <a href="#ref-amarante2022" role="doc-biblioref">Amarante&nbsp;et al., 2022</a>; <a href="#ref-daviet2022" role="doc-biblioref">Daviet&nbsp;et al., 2022</a>)</span></span>。</p>
+</section>
+<section id="vol.替换为第x卷" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="vol.替换为第x卷"><span class="header-section-number">2.2</span> 「vol.」替换为「第 X 卷」</h3>
+<p>在中文文献中，<code>vol.</code> 应该替换为 <code>第 X 卷</code> <span id="cite_9"><span class="citation" data-cites="gezhaoguang2000a zgrmdxqsyjs1983">(<a href="#ref-gezhaoguang2000a" role="doc-biblioref">葛兆光, 2000</a>; <a href="#ref-zgrmdxqsyjs1983" role="doc-biblioref">中国人民大学清史研究所&nbsp;等, 1983</a>)</span></span>。但英文文献中 <code>vol.</code> 仍然需要保留 <span id="cite_10"><span class="citation" data-cites="fletcher1978 fairbank1968a fletcher1978a fletcher1978b">(<a href="#ref-fletcher1978" role="doc-biblioref">Fletcher, 1978b</a>, <a href="#ref-fletcher1978a" role="doc-biblioref">1978a</a>, <a href="#ref-fletcher1978b" role="doc-biblioref">1978c</a>; <a href="#ref-fairbank1968a" role="doc-biblioref">Fairbank, 1968</a>)</span></span>。</p>
+</section>
+<section id="ed.和eds.替换为编" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="ed.和eds.替换为编"><span class="header-section-number">2.3</span> 「ed.」和「eds.」替换为「编」</h3>
+<p>在中文文献中，<code>eds.</code> 和 <code>ed.</code> 应该替换为 <code>编</code> <span id="cite_11"><span class="citation" data-cites="lihongzhang2007 liangqichao2018 yishabai2018 feixiaotong1989 zuozongtang1986">(<a href="#ref-lihongzhang2007" role="doc-biblioref">李鸿章, 2007</a>; <a href="#ref-liangqichao2018" role="doc-biblioref">梁启超, 2018</a>; <a href="#ref-yishabai2018" role="doc-biblioref">伊莎白&nbsp;等, 2018</a>; <a href="#ref-feixiaotong1989" role="doc-biblioref">费孝通, 1989</a>; <a href="#ref-zuozongtang1986" role="doc-biblioref">左宗棠, 1986</a>)</span></span>，不管 <code>ed.</code> 既可以表示 <code>编</code>，也可以表示 <code>第 X 版</code>，相对比较复杂，请参考下面的例子。</p>
+</section>
+<section id="ed.替换为编或第x版" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="ed.替换为编或第x版"><span class="header-section-number">2.4</span> 「ed.」替换为「编」或「第 X 版」</h3>
+<p><code>ed.</code> 既可以表示 <code>编</code> <span id="cite_12"><span class="citation" data-cites="feixiaotong1989 zuozongtang1986">(<a href="#ref-feixiaotong1989" role="doc-biblioref">费孝通, 1989</a>; <a href="#ref-zuozongtang1986" role="doc-biblioref">左宗棠, 1986</a>)</span></span>，也可以表示 <code>第 X 版</code> <span id="cite_13"><span class="citation" data-cites="qinhui2019 taoxisheng2016">(<a href="#ref-qinhui2019" role="doc-biblioref">秦晖&nbsp;等, 2019</a>; <a href="#ref-taoxisheng2016" role="doc-biblioref">陶希圣, 2016</a>)</span></span>，虽然非常灵活，但也给替换带来了一定的困难，不过好在判断条件比较明确。</p>
+</section>
+<section id="tran.和trans.替换为译" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="tran.和trans.替换为译"><span class="header-section-number">2.5</span> 「tran.」和「trans.」替换为「译」</h3>
+<p>在中文文献中，<code>tran.</code> 和 <code>trans.</code> 应该替换为 <code>译</code> <span id="cite_14"><span class="citation" data-cites="hanqilan2004 yishabai2018 maikeerhekete2012 ludefu2019">(<a href="#ref-hanqilan2004" role="doc-biblioref">韩起澜, 2004</a>; <a href="#ref-yishabai2018" role="doc-biblioref">伊莎白&nbsp;等, 2018</a>; <a href="#ref-maikeerhekete2012" role="doc-biblioref">迈克尔·赫克特, 2012</a>; <a href="#ref-ludefu2019" role="doc-biblioref">陆德芙&nbsp;等, 2019</a>)</span></span>。</p>
+<p>值得一提的是，Lua filter <code>localiz-cnbib.lua</code> 同时支持 author-date 和 numeric 两种引用格式，并且在 <code>link-citation</code> 开启或关闭时都能正常工作。当然，上述替换只考虑了常见中文文献字符本地化的情况，如果有其他字符需要本地化，请自行修改 <code>localiz-cnbib.lua</code> 文件，或者提交 issue 给我。</p>
+<p>需要注意，本项目中 <code>gb-author-date.csl</code> 和 <code>gb-numeric.csl</code> 是我根据 Zotero Styles 网站下载的 CSL 样式文件修改而来。与原始样式文件相比，我修改之后的样式文件更加符合 GB/T 7714-2015 标准，<code>localiz-cnbib.lua</code> 也是根据这两个样式文件的格式来编写的，因此 <code>localiz-cnbib.lua</code> 可能无法正常工作在其他 CSL 样式文件上。</p>
+</section>
+</section>
+<section id="中文参考文献按照拼音排序" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="中文参考文献按照拼音排序"><span class="header-section-number">3</span> 中文参考文献按照拼音排序</h2>
+<p>在著者年份制的参考文献表中，中文参考文献一般需要按照拼音排序。基于 GB/T 7714-2015 的 BiLaTeX 样式包 <a href="https://github.com/hushidong/biblatex-gb7714-2015">biblatex-gb7714-2015</a> 支持使用 <code>biber</code> 对中文文献按照排序，但对于 Pandoc 使用的 Citeproc 来说，并不支持这个功能。因此，中文参考文献的排序问题一直是一个头疼的问题。</p>
+<p>本项目使用 Python filter <code>sort-cnbib.py</code> 来解决这个问题，借助 Python 的 <code>pypinyin</code> 库获取中文文献的著者拼音，然后通过 Panflute <span id="cite_15"><span class="citation" data-cites="correia2024">(<a href="#ref-correia2024" role="doc-biblioref">Correia, 2024</a>)</span></span> 修改 Pandoc AST，根据拼音对中文文献进行排序，并且对姓氏读音的多音字进行了特殊处理：</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 多音字的姓氏拼音</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>surname_map <span class="op">=</span> {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'葛'</span>: <span class="st">'ge3'</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'阚'</span>: <span class="st">'kan4'</span>,</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'任'</span>: <span class="st">'ren2'</span>,</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'单'</span>: <span class="st">'shan4'</span>,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'解'</span>: <span class="st">'xie4'</span>,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'燕'</span>: <span class="st">'yan1'</span>,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">'尉'</span>: <span class="st">'yu4'</span>,</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">'乐'</span>: <span class="st">'yue4'</span>,</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">'曾'</span>: <span class="st">'zeng1'</span>,</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'查'</span>: <span class="st">'zha1'</span>,</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>对于参考文献中中文和英文文献哪个在前的问题，各个学校和期刊的要求不一样，有的要求中文在前，有的要求非中文（英文）在前。<code>sort-cnbib.py</code> 默认是英文在前，如果你需要在中文在前，可以将对应代码修改为：</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> elem <span class="kw">in</span> doc.content:</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">isinstance</span>(elem, pf.Div) <span class="kw">and</span> <span class="st">"references"</span> <span class="kw">in</span> elem.classes:</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>            elem.content <span class="op">=</span> doc.chinese_entries <span class="op">+</span> doc.non_chinese_entries</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>需要注意的是，<code>sort-cnbib.py</code> 只需用于 author-date 引用格式，numeric 引用格式不需要排序，因为数字本身就是有序的。</p>
+</section>
+<section id="中文引号的处理" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="中文引号的处理"><span class="header-section-number">4</span> 中文引号的处理</h2>
+<p>中文排版之难，引号为首。引号的处理，是中文排版非常 tricky 的问题，「万恶之源」在于是简体中文和西文的引号相同，但却要求呈现出不同的效果。具体来说，简体中文使用的引号 <code>“</code>、<code>”</code>、<code>‘</code>、<code>’</code> 和英语使用的蝌蚪引号是完全一样的，但由于中文字符较宽，所以在排版时需要让包裹中文的引号看上去更宽一些，而包裹英文的引号看上去更窄一些，特别是在 Word 中。</p>
+<p>正是由于这个原因，不少网友会使用繁体中文的直角引号 <code>「</code>、<code>」</code>、<code>『</code>、<code>』</code> 来替代简体中文的引号，然而中华人民共和国的国家标准规定了使用简体中文的引号，在正式的学术论文这种做法是不被推荐的。</p>
+<p>为了解决这个问题，本项目提供了一套完整的引号处理方案，具体来说，在 Markdown 中使用直角引号 <code>「</code>、<code>」</code>、<code>『</code>、<code>』</code>，借助以下这几个 Lua filters，可以实现引号的自动转换：</p>
+<ul>
+<li><code>docx-quotes.lua</code>：处理 Word 正文中的引号，使包裹中文的引号看上去更宽。</li>
+<li><code>bib-quotes.lua</code>：处理 Word 和 HTML 参考文献中的引号，使 Word 包裹中文的引号看上去更宽，HTML 将蝌蚪引号转换为直角引号。</li>
+<li><code>latex-quotes.lua</code>：处理 LaTeX 中的引号，将中文直角引号转换为蝌蚪引号</li>
+</ul>
+<p>这样，无论是在 Word 中还是在 LaTeX 中，都可以得到符合规范的引号效果，而对于 HTML 来说，则做「反向处理」，将包裹中文的蝌蚪引号转换为直角引号。</p>
+</section>
+<section id="中西文盘古之白" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="中西文盘古之白"><span class="header-section-number">5</span> 中西文盘古之白</h2>
+<p><a href="https://github.com/vinta/pangu.js">pangu.js</a> 中提到：</p>
+<blockquote class="blockquote">
+<p>有研究显示，打字的时候不喜欢在中文和英文之间加空格的人，感情路都走得很辛苦，有七成的比例会在 34 岁的时候跟自己不爱的人结婚，而其余三成的人最后只能把遗产留给自己的猫。毕竟爱情跟书写都需要适时地留白。</p>
+</blockquote>
+<p>尽管手动在中英文、数字之间加一个空格是一个好 <a href="https://www.zhihu.com/question/19587406">习惯</a>，然而在实际写作中，我们往往会忘记这个细节，因此在排版时，我们可以借助工具来自动完成这个工作。</p>
+<p>本项目提供了一个 Python filter <code>auto-correct.py</code> 来解决这个问题，借助 <a href="https://github.com/huacnlee/autocorrect">AutoCorrect</a> <span id="cite_16"><span class="citation" data-cites="lee2024c">(<a href="#ref-lee2024c" role="doc-biblioref">Lee, 2024</a>)</span></span> 的 Python 库，「自动纠正」或「检查并建议」文案，给 CJK（中文、日语、韩语）与英文混写的场景，补充正确的空格，纠正单词，同时尝试以安全的方式自动纠正标点符号等。</p>
+<p>通过 <code>auto-correct.py</code> filter，可以实现修改 Pandoc AST，在 Pandoc 转换过程中自动纠正中英文、数字之间的空格问题，无需在得到目标格式后再进行修改，特别是对于某些格式（如 EPUB）来说，无法在转换完成后再进行修改，因此这个 filter 的优势就体现出来了。</p>
+<p>需要注意的是，LaTeX 和 Word 会自动处理中英文之间的空格，因此无需使用这个 Python filter，只有在转换为其他格式时才需要使用，例如 HTML、EPUB 等格式。</p>
+</section>
+<section id="bibliography" class="level2 unnumbered">
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">参考文献</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-acemoglu2019" class="csl-entry" role="listitem">
+Acemoglu D, Naidu S, Restrepo P, et al., 2019. Democracy <span>Does Cause Growth</span>[J/OL]. Journal of Political Economy, 127(1): 47–100. DOI: <a href="https://doi.org/10.1086/700936">10.1086/700936</a>. [<a href="#cite_5">1</a>, <a href="#cite_8">2</a>]
+</div>
+<div id="ref-allaire2024" class="csl-entry" role="listitem">
+Allaire J J, Teague C, Scheidegger C, et al., 2024. Quarto[CP/OL]. 1.5.39. (2024-05-23)[2024-05-26]. <a href="https://github.com/quarto-dev/quarto-cli">https://github.com/quarto-dev/quarto-cli</a>. DOI: <a href="https://doi.org/10.5281/zenodo.10960780">10.5281/zenodo.10960780</a>. [<a href="#cite_3">1</a>]
+</div>
+<div id="ref-amarante2022" class="csl-entry" role="listitem">
+Amarante V, Burger R, Chelwa G, et al., 2022. Underrepresentation of Developing Country Researchers in Development Research[J/OL]. Applied Economics Letters, 29(17): 1659–1664. DOI: <a href="https://doi.org/10.1080/13504851.2021.1965528">10.1080/13504851.2021.1965528</a>. [<a href="#cite_8">1</a>]
+</div>
+<div id="ref-chatwin2022" class="csl-entry" role="listitem">
+Chatwin J, 2022. Frank <span>Dikötter</span> on <span>Paying Attention</span> to <span>China</span>’s <span>Primary Sources</span>[EB/OL]. The Wire China. (2022-11-06)[2022-11-07]. <a href="https://www.thewirechina.com/2022/11/06/frank-dikotter-on-paying-attention-to-chinas-primary-sources">https://www.thewirechina.com/2022/11/06/frank-dikotter-on-paying-attention-to-chinas-primary-sources</a>.
+</div>
+<div id="ref-correia2024" class="csl-entry" role="listitem">
+Correia S, 2024. Panflute[CP/OL]. 2.3.1. (2024-03-20)[2024-05-27]. <a href="https://github.com/sergiocorreia/panflute">https://github.com/sergiocorreia/panflute</a>. DOI: <a href="https://doi.org/10.5281/zenodo.10841890">10.5281/zenodo.10841890</a>. [<a href="#cite_15">1</a>]
+</div>
+<div id="ref-dahlgren2022" class="csl-entry" role="listitem">
+Dahlgren P M, 2022. Instructions for <span>Reviewer</span> 2: <span>How</span> to Reject a Manuscript for Arbitrary Reasons[R/OL]. Preprint. Open Science Framework(2022-05-25). DOI: <a href="https://doi.org/10.31219/osf.io/t8jsm">10.31219/osf.io/t8jsm</a>.
+</div>
+<div id="ref-daviet2022" class="csl-entry" role="listitem">
+Daviet R, Aydogan G, Jagannathan K, et al., 2022. Associations Between Alcohol Consumption and Gray and White Matter Volumes in the <span>UK Biobank</span>[J/OL]. Nature Communications, 13(1): 1175. DOI: <a href="https://doi.org/10.1038/s41467-022-28735-5">10.1038/s41467-022-28735-5</a>. [<a href="#cite_8">1</a>]
+</div>
+<div id="ref-fairbank1968a" class="csl-entry" role="listitem">
+Fairbank J K, 1968. A <span>Preliminary Framework</span>[G/OL]//Fairbank J K. The <span>Chinese World Order</span>: <span>Traditional China</span>’s <span>Foreign Relations</span>. Cambridge, MA: Harvard University Press: 1–19. DOI: <a href="https://doi.org/10.4159/harvard.9780674333482.c3">10.4159/harvard.9780674333482.c3</a>. [<a href="#cite_10">1</a>]
+</div>
+<div id="ref-fairbank1978" class="csl-entry" role="listitem">
+Fairbank J K, 1978. The <span>Cambridge History</span> of <span>China</span>: <span>Late Ch</span>’ing 1800–1911, <span>Part</span> 1: vol. 10[M/OL]. Cambridge: Cambridge University Press. DOI: <a href="https://doi.org/10.1017/CHOL9780521214476">10.1017/CHOL9780521214476</a>.
+</div>
+<div id="ref-fletcher1978a" class="csl-entry" role="listitem">
+Fletcher J, 1978a. Ch’ing <span>Inner Asia</span> <span><em>c</em></span>. 1800[G/OL]//Fairbank J K. The <span>Cambridge History</span> of <span>China</span>: <span>Late Ch</span>’ing 1800–1911, <span>Part</span> 1: vol. 10. Cambridge: Cambridge University Press: 35–106. DOI: <a href="https://doi.org/10.1017/CHOL9780521214476.003">10.1017/CHOL9780521214476.003</a>. [<a href="#cite_10">1</a>]
+</div>
+<div id="ref-fletcher1978" class="csl-entry" role="listitem">
+Fletcher J, 1978b. Sino-<span>Russian</span> Relations, 1800–62[G/OL]//Fairbank J K. The <span>Cambridge History</span> of <span>China</span>: <span>Late Ch</span>’ing 1800–1911, <span>Part</span> 1: vol. 10. Cambridge: Cambridge University Press: 318–350. DOI: <a href="https://doi.org/10.1017/CHOL9780521214476.008">10.1017/CHOL9780521214476.008</a>. [<a href="#cite_10">1</a>]
+</div>
+<div id="ref-fletcher1978b" class="csl-entry" role="listitem">
+Fletcher J, 1978c. The Heyday of the <span>Ch</span>’ing Order in <span>Mongolia</span>, <span>Sinkiang</span> and <span>Tibet</span>[G/OL]//Fairbank J K. The <span>Cambridge History</span> of <span>China</span>: <span>Late Ch</span>’ing 1800–1911, <span>Part</span> 1: vol. 10. Cambridge: Cambridge University Press: 351–408. DOI: <a href="https://doi.org/10.1017/CHOL9780521214476.009">10.1017/CHOL9780521214476.009</a>. [<a href="#cite_10">1</a>]
+</div>
+<div id="ref-flint2018" class="csl-entry" role="listitem">
+Flint C, Taylor P J, 2018. Political <span>Geography</span>: <span>World-Economy</span>, <span>Nation-State</span> and <span>Locality</span>[M/OL]. 7th ed. London: Routledge. DOI: <a href="https://doi.org/10.4324/9781315164380">10.4324/9781315164380</a>. [<a href="#cite_5">1</a>]
+</div>
+<div id="ref-gao2023a" class="csl-entry" role="listitem">
+Gao Y, Xiong Y, Gao X, et al., 2023. Retrieval-<span>Augmented Generation</span> for <span>Large Language Models</span>: <span>A Survey</span>[EB/OL]. (2023-12-18). DOI: <a href="https://doi.org/10.48550/arXiv.2312.10997">10.48550/arXiv.2312.10997</a>. [<a href="#cite_5">1</a>]
+</div>
+<div id="ref-garrett2004" class="csl-entry" role="listitem">
+Garrett G, 2004. Globalization’s <span>Missing Middle</span>[J/OL]. Foreign Affairs, 83(6): 84–96. DOI: <a href="https://doi.org/10.2307/20034139">10.2307/20034139</a>.
+</div>
+<div id="ref-harrison2009" class="csl-entry" role="listitem">
+Harrison C E, Johnson A, 2009. Introduction: <span>Science</span> and <span>National Identity</span>[J/OL]. Osiris, 24(1): 1–14. DOI: <a href="https://doi.org/10.1086/605966">10.1086/605966</a>.
+</div>
+<div id="ref-hessler2021" class="csl-entry" role="listitem">
+Hessler P, 2021. China’s <span>Reform Generation Adapts</span> to <span>Life</span> in the <span>Middle Class</span>[J/OL]. The New Yorker. (2021-12-27)[2021-10-02]. <a href="https://www.newyorker.com/magazine/2022/01/03/chinas-reform-generation-adapts-to-life-in-the-middle-class">https://www.newyorker.com/magazine/2022/01/03/chinas-reform-generation-adapts-to-life-in-the-middle-class</a>.
+</div>
+<div id="ref-ho1984" class="csl-entry" role="listitem">
+Ho S P S, 1984. Colonialism and <span>Development</span>: <span>Korea</span>, <span>Taiwan</span>, and <span>Kwantung</span>[G/OL]//Myers R H, Peattie M R. The <span>Japanese Colonial Empire</span>, 1895–1945. Princeton: Princeton University Press: 347–398. DOI: <a href="https://doi.org/10.1515/9780691213873-013">10.1515/9780691213873-013</a>.
+</div>
+<div id="ref-holst2020" class="csl-entry" role="listitem">
+Holst M R, 9 workshop participants who wished to remain anonymous, 2020. How to Handle Abuse of Power by <span>PhD</span> Supervisors: <span>A</span> Workshop on Early Career Researcher’s Needs[Z/OL]. (2020-11-09). DOI: <a href="https://doi.org/10.5281/zenodo.4273761">10.5281/zenodo.4273761</a>.
+</div>
+<div id="ref-hsu2000" class="csl-entry" role="listitem">
+Hsü I C Y, 2000. The <span>Rise</span> of <span>Modern China</span>[M]. 6th ed. New York: Oxford University Press.
+</div>
+<div id="ref-hua2021a" class="csl-entry" role="listitem">
+Hua R, 2021. Peasants <span>Versus Empires</span>: <span>Transnational Civil Justice</span> and <span>National Legal Decolonization</span> in <span>Manchuria</span>, 1881–1951[D]. PhD thesis. Cambridge, MA: Harvard University.
+</div>
+<div id="ref-jaffe2013" class="csl-entry" role="listitem">
+Jaffe P, 2013. The <span>Secret</span> of <span>China</span>’s <span>Destiny</span>[G/OL]//Chiang K. China’s <span>Destiny</span> and <span>Chinese Economic Theory</span>. Leiden: Brill: 9–25. DOI: <a href="https://doi.org/10.1163/9789004212732_002">10.1163/9789004212732_002</a>.
+</div>
+<div id="ref-ritvikmath2019" class="csl-entry" role="listitem">
+Kharkar R, 2019. Vector <span>Auto Regression</span>: <span>Time Series Talk</span>[Z/OL]. (2019-10-03)[2020-04-01]. <a href="https://www.youtube.com/watch?v=UQQHSbeIaB0">https://www.youtube.com/watch?v=UQQHSbeIaB0</a>.
+</div>
+<div id="ref-kim2018" class="csl-entry" role="listitem">
+Kim S, Lee Y, 2018. Why Do Women Want to Be Beautiful? <span>A</span> Qualitative Study Proposing a New <span>“Human Beauty Values”</span> Concept[J/OL]. PLOS ONE, 13(8): e0201347. DOI: <a href="https://doi.org/10.1371/journal.pone.0201347">10.1371/journal.pone.0201347</a>.
+</div>
+<div id="ref-krewinkel2017" class="csl-entry" role="listitem">
+Krewinkel A, Winkler R, 2017. Formatting <span>Open Science</span>: Agilely Creating Multiple Document Formats for Academic Manuscripts with <span>Pandoc Scholar</span>[J/OL]. PeerJ Computer Science, 3: 23. DOI: <a href="https://doi.org/10.7717/peerj-cs.112">10.7717/peerj-cs.112</a>. [<a href="#cite_5">1</a>]
+</div>
+<div id="ref-lee2024c" class="csl-entry" role="listitem">
+Lee J, 2024. AutoCorrect[CP/OL]. 2.10.0. (2024-05-22)[2024-05-27]. <a href="https://github.com/huacnlee/autocorrect">https://github.com/huacnlee/autocorrect</a>. [<a href="#cite_16">1</a>]
+</div>
+<div id="ref-li2013a" class="csl-entry" role="listitem">
+Li H, 2013. Reinventing <span>Modern China</span>: <span>Imagination</span> and <span>Authenticity</span> in <span>Chinese Historical Writing</span>[M/OL]. Honolulu: University of Hawai‘i Press. DOI: <a href="https://doi.org/10.21313/hawaii/9780824836085.001.0001">10.21313/hawaii/9780824836085.001.0001</a>.
+</div>
+<div id="ref-macfarlane2024" class="csl-entry" role="listitem">
+MacFarlane J, Krewinkel A, Rosenthal J, 2024. Pandoc[CP/OL]. 3.2. (2024-05-12)[2024-05-15]. <a href="https://github.com/jgm/pandoc">https://github.com/jgm/pandoc</a>. DOI: <a href="https://doi.org/10.5281/zenodo.11179936">10.5281/zenodo.11179936</a>. [<a href="#cite_2">1</a>]
+</div>
+<div id="ref-mittelbach2022" class="csl-entry" role="listitem">
+Mittelbach F, 2022. Tagged and <span>Accessible PDF</span> with <span>LaTeX</span>[Z/OL]. (2022-09)[2023-02-10]. <a href="https://www.pdfa.org/presentation/tagged-and-accessible-pdf-with-latex">https://www.pdfa.org/presentation/tagged-and-accessible-pdf-with-latex</a>.
+</div>
+<div id="ref-mullaney2017" class="csl-entry" role="listitem">
+Mullaney T S, 2017. The <span>Chinese Typewriter</span>: <span>A History</span>[M]. Cambridge, MA: The MIT Press.
+</div>
+<div id="ref-pang2004" class="csl-entry" role="listitem">
+Pang L, Brauw A de, Rozelle S, 2004. Working Until <span>You Drop</span>: <span>The Elderly</span> of <span>Rural China</span>[J/OL]. The China Journal, 52: 73–94. DOI: <a href="https://doi.org/10.2307/4127885">10.2307/4127885</a>. [<a href="#cite_5">1</a>]
+</div>
+<div id="ref-peters2004" class="csl-entry" role="listitem">
+Peters S, 2004. Coercive Western Energy Security Strategies: <span>“Resource Wars”</span> as a New Threat to Global Security[J/OL]. Geopolitics, 9(1): 187–212. DOI: <a href="https://doi.org/10.1080/14650040412331307882">10.1080/14650040412331307882</a>.
+</div>
+<div id="ref-scott1998" class="csl-entry" role="listitem">
+Scott J C, 1998. Seeing <span>Like</span> a <span>State</span>: <span>How Certain Schemes</span> to <span>Improve</span> the <span>Human Condition Have Failed</span>[M/OL]. New Haven: Yale University Press. DOI: <a href="https://doi.org/10.12987/9780300128789">10.12987/9780300128789</a>.
+</div>
+<div id="ref-shi2021a" class="csl-entry" role="listitem">
+Shi P, 2021. On <span>Li Hongzhang</span>’s <span>Coastal Defense Measures Under</span> the <span>Sino-Japanese Conflict</span> in the 1870s[C/OL]//2nd <span>International Conference</span> on <span>Language</span>, <span>Art</span> and <span>Cultural Exchange</span> (<span>ICLACE</span> 2021). Atlantis Press: 574–579. DOI: <a href="https://doi.org/10.2991/assehr.k.210609.113">10.2991/assehr.k.210609.113</a>.
+</div>
+<div id="ref-spence2013" class="csl-entry" role="listitem">
+Spence J D, 2013. The <span>Search</span> for <span>Modern China</span>[M]. 3rd ed. New York: W. W. Norton &amp; Company.
+</div>
+<div id="ref-tenen2014" class="csl-entry" role="listitem">
+Tenen D, Wythoff G, 2014. Sustainable <span>Authorship</span> in <span>Plain Text</span> Using <span>Pandoc</span> and <span>Markdown</span>[J/OL]. Programming Historian(3). DOI: <a href="https://doi.org/10.46430/phen0041">10.46430/phen0041</a>. [<a href="#cite_4">1</a>]
+</div>
+<div id="ref-ungeneralassembly1962" class="csl-entry" role="listitem">
+UN General Assembly, 1962. General <span>Assembly</span> Resolution 1803 (<span>XVII</span>) of 14 <span>December</span> 1962, <span>“<span>Permanent</span> Sovereignty over Natural Resources”</span>[R/OL]. United Nations(1962-12-14)[2023-03-09]. <a href="https://www.ohchr.org/en/instruments-mechanisms/instruments/general-assembly-resolution-1803-xvii-14-december-1962-permanent">https://www.ohchr.org/en/instruments-mechanisms/instruments/general-assembly-resolution-1803-xvii-14-december-1962-permanent</a>.
+</div>
+<div id="ref-vincent1942" class="csl-entry" role="listitem">
+Vincent J C, 1942. Memorandum by the <span>Counselor</span> of <span>Embassy</span> in <span>China</span> (<span>Vincent</span>) to the <span>Ambassador</span> in <span>China</span> (<span>Gauss</span>), <span>Document</span> 192[EB/OL]. Foreign Relations of the United States: Diplomatic Papers, China. (1942-10-07)[2023-09-21]. <a href="https://history.state.gov/historicaldocuments/frus1942China/d192">https://history.state.gov/historicaldocuments/frus1942China/d192</a>.
+</div>
+<div id="ref-ward2021" class="csl-entry" role="listitem">
+Ward A F, 2021. People <span>Mistake</span> the <span>Internet</span>’s <span>Knowledge</span> for <span>Their Own</span>[J/OL]. Proceedings of the National Academy of Sciences, 118(43): e2105061118. DOI: <a href="https://doi.org/10.1073/pnas.2105061118">10.1073/pnas.2105061118</a>.
+</div>
+<div id="ref-yang2023e" class="csl-entry" role="listitem">
+Yang Z, Li L, Lin K, et al., 2023. The <span>Dawn</span> of <span>LMMs</span>: <span>Preliminary Explorations</span> with <span>GPT-4V</span>(ision)[EB/OL]. (2023-09-29). DOI: <a href="https://doi.org/10.48550/arXiv.2309.17421">10.48550/arXiv.2309.17421</a>. [<a href="#cite_7">1</a>]
+</div>
+<div id="ref-zarrow2012" class="csl-entry" role="listitem">
+Zarrow P, 2012. After <span>Empire</span>: <span>The Conceptual Transformation</span> of the <span>Chinese State</span>, 1885–1924[M/OL]. Stanford: Stanford University Press. DOI: <a href="https://doi.org/10.1515/9780804781879">10.1515/9780804781879</a>.
+</div>
+<div id="ref-caidingjian2011" class="csl-entry" role="listitem">
+蔡定剑, 王占阳, 2011. 走向宪政[M]. 北京: 法律出版社.
+</div>
+<div id="ref-caojingjing2020" class="csl-entry" role="listitem">
+曹晶晶, 章锦河, 王昶, 等, 2020. 距离欲对旅游者目的地选择影响的解释框架[J/OL]. 地理学报, 75(4): 860–877. DOI: <a href="https://doi.org/10.11821/dlxb202004014">10.11821/dlxb202004014</a>. [<a href="#cite_8">1</a>]
+</div>
+<div id="ref-chuanping1955" class="csl-entry" role="listitem">
+储安平, 1955. 在阿尔泰山之巅[N]. 人民日报, 1955-12-16: 3.
+</div>
+<div id="ref-feixiaotong1989" class="csl-entry" role="listitem">
+费孝通, 1989. 中华民族多元一体格局[M]. 北京: 中央民族学院出版社. [<a href="#cite_11">1</a>, <a href="#cite_12">2</a>]
+</div>
+<div id="ref-feixiaotong2013" class="csl-entry" role="listitem">
+费孝通, 2013. 乡土中国[M]. 刘豪兴, 编. 修订本. 上海: 上海人民出版社.
+</div>
+<div id="ref-gezhaoguang2000a" class="csl-entry" role="listitem">
+葛兆光, 2000. 中国思想史——导论：思想史的写法: 第 1 卷[M]. 上海: 复旦大学出版社. [<a href="#cite_9">1</a>]
+</div>
+<div id="ref-gezhaoguang2011" class="csl-entry" role="listitem">
+葛兆光, 2011. 宅兹中国：重建有关「中国」的历史论述[M]. 北京: 中华书局.
+</div>
+<div id="ref-gezhaoguang2014" class="csl-entry" role="listitem">
+葛兆光, 2014. 何為「中國」？——疆域、民族、文化與歷史[M]. 香港: 牛津大學出版社.
+</div>
+<div id="ref-geyanfeng2020" class="csl-entry" role="listitem">
+葛延风, 王列军, 冯文猛, 等, 2020. 我国健康老龄化的挑战与策略选择[J/OL]. 管理世界, 36(4): 86–96. DOI: <a href="https://doi.org/10.19744/j.cnki.11-1235/f.2020.0055">10.19744/j.cnki.11-1235/f.2020.0055</a>. [<a href="#cite_8">1</a>]
+</div>
+<div id="ref-guomindahui1947" class="csl-entry" role="listitem">
+國民大會, 1947. 中華民國憲法[A/OL]. (1947-01-01)[2023-03-09]. <a href="https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000001">https://law.moj.gov.tw/LawClass/LawAll.aspx?pcode=A0000001</a>.
+</div>
+<div id="ref-hanqilan2004" class="csl-entry" role="listitem">
+韩起澜, 2004. 苏北人在上海（1850–1980）[M]. 卢明华, 译. 上海: 上海古籍出版社. [<a href="#cite_14">1</a>]
+</div>
+<div id="ref-jiazhen1979" class="csl-entry" role="listitem">
+賈禎, 寶鋆, 文祥, 等, 1979. 籌辦夷務始末（咸豐朝）[M]. 北京: 中華書局. [<a href="#cite_6">1</a>]
+</div>
+<div id="ref-jiangyuanshan2009" class="csl-entry" role="listitem">
+江远山, 2009. 近代中国地域政治化研究——以广东为考察对象[D/OL]. 博士学位论文. 上海: 复旦大学. DOI: <a href="https://doi.org/10.7666/d.y1970854">10.7666/d.y1970854</a>.
+</div>
+<div id="ref-jiangzemin2008" class="csl-entry" role="listitem">
+江泽民, 2008. 对中国能源问题的思考[J/OL]. 上海交通大学学报(3): 345–359. DOI: <a href="https://doi.org/10.16183/j.cnki.jsjtu.2008.03.001">10.16183/j.cnki.jsjtu.2008.03.001</a>.
+</div>
+<div id="ref-kanyaoping2003" class="csl-entry" role="listitem">
+阚耀平, 2003. 清代天山北路人口迁移与区域开发研究[D]. 博士学位论文. 上海: 复旦大学.
+</div>
+<div id="ref-lihongzhang2007" class="csl-entry" role="listitem">
+李鸿章, 2007. 李鸿章全集（奏议六）[M]. 顾廷龙, 戴逸, 编. 合肥: 安徽教育出版社. [<a href="#cite_11">1</a>]
+</div>
+<div id="ref-liangqichao2018" class="csl-entry" role="listitem">
+梁启超, 2018. 梁启超全集（第二集，论著二）[M]. 汤志钧, 汤仁泽, 编. 北京: 中国人民大学出版社. [<a href="#cite_11">1</a>]
+</div>
+<div id="ref-liucuirong1999" class="csl-entry" role="listitem">
+劉翠溶, 1999. 中國歷史上關於山林川澤的觀念和制度[G]//曹添旺, 賴景昌, 楊建成. 經濟成長、所得分配與制度演化. 臺北: 中央研究院中山人文社會科學研究所: 1–42.
+</div>
+<div id="ref-lushaowei2015" class="csl-entry" role="listitem">
+卢少微, 冯春林, 聂鹏, 等, 2015. 碳纳米管用于聚合物基复合材料健康监测的研究进展[J/OL]. 航空材料学报, 35(2): 12–20. DOI: <a href="https://doi.org/10.11868/j.issn.1005-5053.2015.2.002">10.11868/j.issn.1005-5053.2015.2.002</a>. [<a href="#cite_7">1</a>]
+</div>
+<div id="ref-ludefu2019" class="csl-entry" role="listitem">
+陆德芙, 宋怡明, 2019. 中国 36 问：对一个崛起大国的洞察[M]. 余江, 郑言, 译. 香港: 香港城市大学出版社. [<a href="#cite_14">1</a>]
+</div>
+<div id="ref-marong2016" class="csl-entry" role="listitem">
+马戎, 2016. <span>「中华民族是一个」</span>——围绕 1939 年这一议题的大讨论[M]. 北京: 社会科学文献出版社.
+</div>
+<div id="ref-maikeerhekete2012" class="csl-entry" role="listitem">
+迈克尔·赫克特, 2012. 遏制民族主义[M]. 韩召颖, 译. 北京: 中国人民大学出版社. [<a href="#cite_14">1</a>]
+</div>
+<div id="ref-qinhui2019" class="csl-entry" role="listitem">
+秦晖, 金雁, 2019. 田园诗与狂想曲：关中模式与前近代社会的再认识[M]. 第 3 版. 南京: 江苏凤凰文艺出版社. [<a href="#cite_6">1</a>, <a href="#cite_13">2</a>]
+</div>
+<div id="ref-qgrmdbdh2018" class="csl-entry" role="listitem">
+全国人民代表大会, 2018. 中华人民共和国宪法[N]. 人民日报, 2018-03-22: 1–3.
+</div>
+<div id="ref-shenzhihua2003" class="csl-entry" role="listitem">
+沈志华, 2003. 苏联专家在中国[M]. 北京: 中国国际广播出版社.
+</div>
+<div id="ref-taoxisheng2016" class="csl-entry" role="listitem">
+陶希圣, 2016. 潮流与点滴：陶希圣回忆录[M]. 第 2 版. 北京: 中国大百科全书出版社. [<a href="#cite_13">1</a>]
+</div>
+<div id="ref-yishabai2018" class="csl-entry" role="listitem">
+伊莎白, 柯临清, 2018. 战时中国农村的风习、改造与抵拒：兴隆场（1940–1941）[M]. 邵达, 译. 贺萧, 韩起澜, 编. 北京: 外语教学与研究出版社. [<a href="#cite_6">1</a>, <a href="#cite_11">2</a>, <a href="#cite_14">3</a>]
+</div>
+<div id="ref-zengwenwu1936" class="csl-entry" role="listitem">
+曾問吾, 1936. 中國經營西域史[M]. 上海: 商務印書館.
+</div>
+<div id="ref-zhangqixiong2010" class="csl-entry" role="listitem">
+张启雄, 2010. 中华世界秩序原理的源起：近代中国外交纷争中的古典文化价值[G]//吴志攀, 李玉. 东亚的价值. 北京: 北京大学出版社.
+</div>
+<div id="ref-zhaojizhi2024" class="csl-entry" role="listitem">
+赵继之, 辛公锋, 陶慕轩, 等, 2024. 超高性能混凝土单轴拉、压循环作用下力学性能及其本构模型研究[J/OL]. 工程力学, 41(4): 81–93. DOI: <a href="https://doi.org/10.6052/j.issn.1000-4750.2022.04.0339">10.6052/j.issn.1000-4750.2022.04.0339</a>. [<a href="#cite_6">1</a>]
+</div>
+<div id="ref-zgrmdxqsyjs1983" class="csl-entry" role="listitem">
+中国人民大学清史研究所, 中国人民大学档案系中国政治制度史教研室, 1983. 清代的矿业: 第 1 卷[M]. 北京: 中华书局. [<a href="#cite_9">1</a>]
+</div>
+<div id="ref-zuozongtang1986" class="csl-entry" role="listitem">
+左宗棠, 1986. 左宗棠全集（札件）[M]. 邓云生, 编. 长沙: 岳麓书社. [<a href="#cite_11">1</a>, <a href="#cite_12">2</a>]
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+          // default icon
+          link.classList.add("external");
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
+
+
+
+
+</body></html>
