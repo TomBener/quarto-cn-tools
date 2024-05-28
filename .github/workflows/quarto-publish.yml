@@ -51,9 +51,7 @@ jobs:
 
       - name: Render outputs
         run: |
-          make docx
-          make html
-          make slides
+          make
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
