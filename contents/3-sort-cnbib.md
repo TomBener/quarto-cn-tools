@@ -13,27 +13,19 @@
 根据拼音对中文文献进行排序，并且对姓氏读音的多音字进行了特殊处理：
 
 ```py
-def special_pinyin(text):
-    # 多音字的姓氏拼音
-    surname_map = {
-        '葛': 'ge3',
-        '阚': 'kan4',
-        '任': 'ren2',
-        '单': 'shan4',
-        '解': 'xie4',
-        '燕': 'yan1',
-        '尉': 'yu4',
-        '乐': 'yue4',
-        '曾': 'zeng1',
-        '查': 'zha1',
-    }
-
-    if contains_chinese(text):
-        name = text.split(",")[0] if "," in text else text
-        surname = name[0]
-        return surname_map.get(surname, "".join([i[0] for i in pinyin(name, style=Style.TONE3)]))
-    else:
-        return None
+# 多音字的姓氏拼音
+surname_map = {
+    '葛': 'ge3',
+    '阚': 'kan4',
+    '任': 'ren2',
+    '单': 'shan4',
+    '解': 'xie4',
+    '燕': 'yan1',
+    '尉': 'yu4',
+    '乐': 'yue4',
+    '曾': 'zeng1',
+    '查': 'zha1',
+}
 ```
 
 对于参考文献中中文和英文文献哪个在前的问题，

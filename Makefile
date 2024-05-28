@@ -1,5 +1,5 @@
 # `make citebib`: Extract all bibliographies cited as BibLaTeX
-# `make` or `make all`: Render DOCX, HTML, PDF and Reveal.js slides
+# `make` or `make all`: Render DOCX, HTML, PDF and Reveal.js slides at once
 # `make print`: Render PDF for print
 # `make watermark`: Render PDF with watermark
 # `make clean`: Remove auxiliary and output files
