@@ -34,9 +34,9 @@ jobs:
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
           extra-packages: |
-            any::knitr
-            any::rmarkdown
-            any::ggplot2
+            knitr
+            rmarkdown
+            ggplot2
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
