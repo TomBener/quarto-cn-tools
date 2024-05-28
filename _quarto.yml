@@ -66,8 +66,6 @@ format:
   pdf:
     filters:
       - latex-quotes
-    fig-width: 7
-    fig-height: 4.8
     include-in-header:
       - _styles/custom.tex
     template-partials:
@@ -79,7 +77,6 @@ format:
     papersize: a4
     twoside: true
     geometry: [margin=2.5cm]
-    pagestyle: plain
     linkcolor: winered
     citecolor: winered
     urlcolor: urlblue
@@ -110,8 +107,6 @@ format:
     number-sections: false
     chalkboard:
       buttons: false
-    # width: 1280
-    # height: 800
     pdf-separate-fragments: true
     include-in-header:
       - text: |
