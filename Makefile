@@ -28,11 +28,13 @@ dependencies:
 
 QUARTO := @quarto render index.qmd --to
 FILTERS := -L _extensions/citation-backlinks.lua \
-	-L _extensions/localize-cnbib.lua --filter _extensions/sort-cnbib.py
+	-L _extensions/localize-cnbib.lua \
+	-L _extensions/bib-quotes.lua \
+	--filter _extensions/sort-cnbib.py
 
 # Render DOCX
 docx: dependencies
-	$(QUARTO) $@ $(FILTERS) -L _extensions/bib-quotes.lua
+	$(QUARTO) $@ $(FILTERS)
 
 # Render HTML
 html: dependencies

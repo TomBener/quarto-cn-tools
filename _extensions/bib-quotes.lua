@@ -1,3 +1,5 @@
+-- Process quotes for Chinese bibliographies in docx and html output
+
 function is_chinese(text)
     return text:find("[\228-\233][\128-\191][\128-\191]")
 end
@@ -10,10 +12,20 @@ function quotes_in_bib(block)
             local next_text = i < #elements and elements[i + 1].t == "Str" and elements[i + 1].text or ""
 
             if is_chinese(prev_text) or is_chinese(next_text) then
-                elements[i] = pandoc.RawInline("openxml",
-                    string.format(
-                        '<w:r><w:rPr><w:rFonts w:hint="eastAsia"/></w:rPr><w:t xml:space="preserve">%s</w:t></w:r>',
-                        el.text))
+                if FORMAT:match 'docx' then
+                    elements[i] = pandoc.RawInline("openxml",
+                        string.format(
+                            '<w:r><w:rPr><w:rFonts w:hint="eastAsia"/></w:rPr><w:t xml:space="preserve">%s</w:t></w:r>',
+                            el.text))
+                elseif FORMAT:match 'html' then
+                    local replaced_text = el.text
+                    if el.text == "“" then
+                        replaced_text = "「"
+                    elseif el.text == "”" then
+                        replaced_text = "」"
+                    end
+                    elements[i] = pandoc.Str(replaced_text)
+                end
             end
         end
     end
