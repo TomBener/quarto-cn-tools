@@ -1,6 +1,9 @@
--- Get a BibTeX/BibLaTeX or CSL JSON file cited from a large database
--- Source: https://pandoc.org/lua-filters.html#pandoc.utils.references
--- https://twitter.com/pandoc_tips/status/1481910457145434113
+--- Get a BibTeX/BibLaTeX or CSL JSON file cited from a large database
+--- Source: https://pandoc.org/lua-filters.html#pandoc.utils.references
+--- https://twitter.com/pandoc_tips/status/1481910457145434113
+
+--- Copyright: © 2022–2024 Albert Krewinkel 
+--- License: MIT License
 
 -- *Note*: For BibLaTeX, it is needed to change the following entry name:
 -- - journal -> journaltitle

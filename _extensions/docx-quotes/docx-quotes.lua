@@ -1,5 +1,8 @@
--- 1. Convert straight Chinese quotes to Pandoc's Quoted elements (DoubleQuote and SingleQuote)
--- 2. Change Quoted elements to the Chinese style by adding XML tags in the docx output
+--- 1. Convert straight Chinese quotes to Pandoc's Quoted elements (DoubleQuote and SingleQuote)
+--- 2. Change Quoted elements to the Chinese style by adding XML tags in the docx output
+
+--- Copyright: © 2024 Tom Ben
+--- License: MIT License
 
 -- Check if the text contains Chinese characters
 function is_chinese(text)

@@ -3,6 +3,9 @@
 # Convert reference-style links to inline links
 # Remove line breaks within a straight Chinese quote
 
+# Copyright: © 2024 Tom Ben
+# License: MIT License
+
 import re
 import glob
 import os

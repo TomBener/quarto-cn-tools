@@ -1,5 +1,8 @@
 # Improve copywriting, correct spaces, words, and punctuations between CJK and English with AutoCorrect
 
+# Copyright: © 2024 Tom Ben
+# License: MIT License
+
 import panflute as pf
 import autocorrect_py as autocorrect
 import json

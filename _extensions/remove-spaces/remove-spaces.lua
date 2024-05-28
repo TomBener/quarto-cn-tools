@@ -1,4 +1,7 @@
--- Remove spaces before or after Chinese characters
+--- Remove spaces before or after Chinese characters
+
+--- Copyright: © 2024 Tom Ben
+--- License: MIT License
 
 -- Check if the character is non-ASCII (potentially a Chinese character).
 local function is_non_ascii(char)

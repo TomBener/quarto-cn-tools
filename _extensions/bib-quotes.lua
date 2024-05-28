@@ -1,5 +1,8 @@
 -- Process quotes for Chinese bibliographies in docx and html output
 
+--- Copyright: © 2024 Tom Ben
+--- License: MIT License
+
 function is_chinese(text)
     return text:find("[\228-\233][\128-\191][\128-\191]")
 end

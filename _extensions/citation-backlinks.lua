@@ -1,10 +1,10 @@
--- Modified from https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/citation-backlinks.lua
+--- Modified from https://github.com/bcdavasconcelos/citetools/blob/main/_extensions/citetools/citation-backlinks.lua
 
--- Todo: even with link-citations and link-fields turned off, citation-backlinks still adds a single backlink to each reference in the final bibliography div.
+--- Todo: even with link-citations and link-fields turned off, citation-backlinks still adds a single backlink to each reference in the final bibliography div.
 
 --- citation-backlinks.lua – adds citation backlinks to the bibliography
----
---- Copyright: © 2023 John MacFarlane and Albert Krewinkel and Bernardo Vasconcelos
+-- https://github.com/tarleb/citation-backlinks
+--- Copyright: © 2022–2024 John MacFarlane and Albert Krewinkel and Bernardo Vasconcelos
 --- License: MIT – see LICENSE for details
 
 -- Makes sure users know if their pandoc version is too old for this

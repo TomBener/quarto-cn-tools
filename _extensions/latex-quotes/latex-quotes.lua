@@ -1,3 +1,8 @@
+--- Replaces Straight quotes with German quotes for intermediate in LaTeX output
+
+--- Copyright: © 2024 Tom Ben
+--- License: MIT License
+
 function Str(el)
     local replacements = {
         ['「'] = '«',

@@ -1,7 +1,10 @@
--- Emulate Pandoc's extension `east_asian_line_breaks` in Quarto
--- Ignore soft break adjacent to Chinese characters
--- Created by ChatGPT based on https://taoshu.in/unix/markdown-soft-break.html
--- Tracking Quarto issue: https://github.com/quarto-dev/quarto-cli/issues/8520
+--- Emulate Pandoc's extension `east_asian_line_breaks` in Quarto
+--- Ignore soft break adjacent to Chinese characters
+--- Created by ChatGPT based on https://taoshu.in/unix/markdown-soft-break.html
+--- Tracking Quarto issue: https://github.com/quarto-dev/quarto-cli/issues/8520
+
+--- Copyright: © 2024 Tom Ben
+--- License: MIT License
 
 function is_ascii(char)
   if char == nil then return false end
