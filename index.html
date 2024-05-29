@@ -159,11 +159,11 @@ div.csl-indent {
   <li><a href="#前言" id="toc-前言" class="nav-link active" data-scroll-target="#前言"><span class="header-section-number">1</span> 前言</a></li>
   <li><a href="#参考文献本地化" id="toc-参考文献本地化" class="nav-link" data-scroll-target="#参考文献本地化"><span class="header-section-number">2</span> 参考文献本地化</a>
   <ul>
-  <li><a href="#et-al.替换为等" id="toc-et-al.替换为等" class="nav-link" data-scroll-target="#et-al.替换为等"><span class="header-section-number">2.1</span> 「et al.」替换为「等」</a></li>
-  <li><a href="#vol.替换为第x卷" id="toc-vol.替换为第x卷" class="nav-link" data-scroll-target="#vol.替换为第x卷"><span class="header-section-number">2.2</span> 「vol.」替换为「第 X 卷」</a></li>
-  <li><a href="#ed.和eds.替换为编" id="toc-ed.和eds.替换为编" class="nav-link" data-scroll-target="#ed.和eds.替换为编"><span class="header-section-number">2.3</span> 「ed.」和「eds.」替换为「编」</a></li>
-  <li><a href="#ed.替换为编或第x版" id="toc-ed.替换为编或第x版" class="nav-link" data-scroll-target="#ed.替换为编或第x版"><span class="header-section-number">2.4</span> 「ed.」替换为「编」或「第 X 版」</a></li>
-  <li><a href="#tran.和trans.替换为译" id="toc-tran.和trans.替换为译" class="nav-link" data-scroll-target="#tran.和trans.替换为译"><span class="header-section-number">2.5</span> 「tran.」和「trans.」替换为「译」</a></li>
+  <li><a href="#et-al.-替换为等" id="toc-et-al.-替换为等" class="nav-link" data-scroll-target="#et-al.-替换为等"><span class="header-section-number">2.1</span> “et al.” 替换为「等」</a></li>
+  <li><a href="#vol.-替换为第x卷" id="toc-vol.-替换为第x卷" class="nav-link" data-scroll-target="#vol.-替换为第x卷"><span class="header-section-number">2.2</span> “vol.” 替换为「第 X 卷」</a></li>
+  <li><a href="#ed.-和-eds.-替换为编" id="toc-ed.-和-eds.-替换为编" class="nav-link" data-scroll-target="#ed.-和-eds.-替换为编"><span class="header-section-number">2.3</span> “ed.” 和 “eds.” 替换为「编」</a></li>
+  <li><a href="#ed.-替换为编或第x版" id="toc-ed.-替换为编或第x版" class="nav-link" data-scroll-target="#ed.-替换为编或第x版"><span class="header-section-number">2.4</span> “ed.” 替换为「编」或「第 X 版」</a></li>
+  <li><a href="#tran.-和-trans.-替换为译" id="toc-tran.-和-trans.-替换为译" class="nav-link" data-scroll-target="#tran.-和-trans.-替换为译"><span class="header-section-number">2.5</span> “tran.” 和 “trans.” 替换为「译」</a></li>
   </ul></li>
   <li><a href="#中文参考文献按照拼音排序" id="toc-中文参考文献按照拼音排序" class="nav-link" data-scroll-target="#中文参考文献按照拼音排序"><span class="header-section-number">3</span> 中文参考文献按照拼音排序</a></li>
   <li><a href="#中文引号的处理" id="toc-中文引号的处理" class="nav-link" data-scroll-target="#中文引号的处理"><span class="header-section-number">4</span> 中文引号的处理</a></li>
@@ -225,27 +225,27 @@ div.csl-indent {
 </section>
 <section id="参考文献本地化" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="参考文献本地化"><span class="header-section-number">2</span> 参考文献本地化</h2>
-<p>Pandoc 使用 CSL (Citation Style Language) 来格式化参考文献信息，然而 CSL 不支持多语言的参考文献格式化，例如在 Pandoc 中将语言设置为 <code>en-US</code> 时，所以文献的本地化字符都会被转换为英文，例如 <code>et al.</code>、<code>vol.</code>、<code>ed.</code> 等。</p>
+<p>Pandoc 使用 CSL（Citation Style Language）来格式化参考文献信息，然而 CSL 不支持多语言的参考文献格式化，例如在 Pandoc 中将语言设置为 <code>en-US</code> 时，所以文献的本地化字符都会被转换为英文，例如 <code>et al.</code>、<code>vol.</code>、<code>ed.</code> 等。</p>
 <p>本项目使用 Lua filter <code>localiz-cnbib.lua</code> 来解决这个问题。</p>
-<section id="et-al.替换为等" class="level3" data-number="2.1">
-<h3 data-number="2.1" class="anchored" data-anchor-id="et-al.替换为等"><span class="header-section-number">2.1</span> 「et al.」替换为「等」</h3>
+<section id="et-al.-替换为等" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="et-al.-替换为等"><span class="header-section-number">2.1</span> “et al.” 替换为「等」</h3>
 <p>在 author-date 样式中，正文中超过一个作者时，只显示第一作者，英文文献后用 <code>et al.</code> 表示 <span id="cite_5"><span class="citation" data-cites="acemoglu2019 gao2023a pang2004 krewinkel2017 flint2018">(<a href="#ref-acemoglu2019" role="doc-biblioref">Acemoglu&nbsp;et al., 2019</a>; <a href="#ref-gao2023a" role="doc-biblioref">Gao&nbsp;et al., 2023</a>; <a href="#ref-pang2004" role="doc-biblioref">Pang&nbsp;et al., 2004</a>; <a href="#ref-krewinkel2017" role="doc-biblioref">Krewinkel&nbsp;et al., 2017</a>; <a href="#ref-flint2018" role="doc-biblioref">Flint&nbsp;et al., 2018</a>)</span></span>。对于中文文献，<code>et al.</code> 则应该替换为 <code>等</code> <span id="cite_6"><span class="citation" data-cites="qinhui2019 yishabai2018 jiazhen1979 zhaojizhi2024">(<a href="#ref-qinhui2019" role="doc-biblioref">秦晖&nbsp;等, 2019</a>; <a href="#ref-yishabai2018" role="doc-biblioref">伊莎白&nbsp;等, 2018</a>; <a href="#ref-jiazhen1979" role="doc-biblioref">賈禎&nbsp;等, 1979</a>; <a href="#ref-zhaojizhi2024" role="doc-biblioref">赵继之&nbsp;等, 2024</a>)</span></span>。</p>
 <p>对于参考文献表来说，超过 3 个作者时，也应该使用 <code>et al.</code> 或 <code>等</code> 来表示 <span id="cite_7"><span class="citation" data-cites="lushaowei2015 yang2023e">(<a href="#ref-lushaowei2015" role="doc-biblioref">卢少微&nbsp;等, 2015</a>; <a href="#ref-yang2023e" role="doc-biblioref">Yang&nbsp;et al., 2023</a>)</span></span>，以及更多例子 <span id="cite_8"><span class="citation" data-cites="acemoglu2019 geyanfeng2020 caojingjing2020 amarante2022 daviet2022">(<a href="#ref-acemoglu2019" role="doc-biblioref">Acemoglu&nbsp;et al., 2019</a>; <a href="#ref-geyanfeng2020" role="doc-biblioref">葛延风&nbsp;等, 2020</a>; <a href="#ref-caojingjing2020" role="doc-biblioref">曹晶晶&nbsp;等, 2020</a>; <a href="#ref-amarante2022" role="doc-biblioref">Amarante&nbsp;et al., 2022</a>; <a href="#ref-daviet2022" role="doc-biblioref">Daviet&nbsp;et al., 2022</a>)</span></span>。</p>
 </section>
-<section id="vol.替换为第x卷" class="level3" data-number="2.2">
-<h3 data-number="2.2" class="anchored" data-anchor-id="vol.替换为第x卷"><span class="header-section-number">2.2</span> 「vol.」替换为「第 X 卷」</h3>
+<section id="vol.-替换为第x卷" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="vol.-替换为第x卷"><span class="header-section-number">2.2</span> “vol.” 替换为「第 X 卷」</h3>
 <p>在中文文献中，<code>vol.</code> 应该替换为 <code>第 X 卷</code> <span id="cite_9"><span class="citation" data-cites="gezhaoguang2000a zgrmdxqsyjs1983">(<a href="#ref-gezhaoguang2000a" role="doc-biblioref">葛兆光, 2000</a>; <a href="#ref-zgrmdxqsyjs1983" role="doc-biblioref">中国人民大学清史研究所&nbsp;等, 1983</a>)</span></span>。但英文文献中 <code>vol.</code> 仍然需要保留 <span id="cite_10"><span class="citation" data-cites="fletcher1978 fairbank1968a fletcher1978a fletcher1978b">(<a href="#ref-fletcher1978" role="doc-biblioref">Fletcher, 1978b</a>, <a href="#ref-fletcher1978a" role="doc-biblioref">1978a</a>, <a href="#ref-fletcher1978b" role="doc-biblioref">1978c</a>; <a href="#ref-fairbank1968a" role="doc-biblioref">Fairbank, 1968</a>)</span></span>。</p>
 </section>
-<section id="ed.和eds.替换为编" class="level3" data-number="2.3">
-<h3 data-number="2.3" class="anchored" data-anchor-id="ed.和eds.替换为编"><span class="header-section-number">2.3</span> 「ed.」和「eds.」替换为「编」</h3>
+<section id="ed.-和-eds.-替换为编" class="level3" data-number="2.3">
+<h3 data-number="2.3" class="anchored" data-anchor-id="ed.-和-eds.-替换为编"><span class="header-section-number">2.3</span> “ed.” 和 “eds.” 替换为「编」</h3>
 <p>在中文文献中，<code>eds.</code> 和 <code>ed.</code> 应该替换为 <code>编</code> <span id="cite_11"><span class="citation" data-cites="lihongzhang2007 liangqichao2018 yishabai2018 feixiaotong1989 zuozongtang1986">(<a href="#ref-lihongzhang2007" role="doc-biblioref">李鸿章, 2007</a>; <a href="#ref-liangqichao2018" role="doc-biblioref">梁启超, 2018</a>; <a href="#ref-yishabai2018" role="doc-biblioref">伊莎白&nbsp;等, 2018</a>; <a href="#ref-feixiaotong1989" role="doc-biblioref">费孝通, 1989</a>; <a href="#ref-zuozongtang1986" role="doc-biblioref">左宗棠, 1986</a>)</span></span>，不管 <code>ed.</code> 既可以表示 <code>编</code>，也可以表示 <code>第 X 版</code>，相对比较复杂，请参考下面的例子。</p>
 </section>
-<section id="ed.替换为编或第x版" class="level3" data-number="2.4">
-<h3 data-number="2.4" class="anchored" data-anchor-id="ed.替换为编或第x版"><span class="header-section-number">2.4</span> 「ed.」替换为「编」或「第 X 版」</h3>
+<section id="ed.-替换为编或第x版" class="level3" data-number="2.4">
+<h3 data-number="2.4" class="anchored" data-anchor-id="ed.-替换为编或第x版"><span class="header-section-number">2.4</span> “ed.” 替换为「编」或「第 X 版」</h3>
 <p><code>ed.</code> 既可以表示 <code>编</code> <span id="cite_12"><span class="citation" data-cites="feixiaotong1989 zuozongtang1986">(<a href="#ref-feixiaotong1989" role="doc-biblioref">费孝通, 1989</a>; <a href="#ref-zuozongtang1986" role="doc-biblioref">左宗棠, 1986</a>)</span></span>，也可以表示 <code>第 X 版</code> <span id="cite_13"><span class="citation" data-cites="qinhui2019 taoxisheng2016">(<a href="#ref-qinhui2019" role="doc-biblioref">秦晖&nbsp;等, 2019</a>; <a href="#ref-taoxisheng2016" role="doc-biblioref">陶希圣, 2016</a>)</span></span>，虽然非常灵活，但也给替换带来了一定的困难，不过好在判断条件比较明确。</p>
 </section>
-<section id="tran.和trans.替换为译" class="level3" data-number="2.5">
-<h3 data-number="2.5" class="anchored" data-anchor-id="tran.和trans.替换为译"><span class="header-section-number">2.5</span> 「tran.」和「trans.」替换为「译」</h3>
+<section id="tran.-和-trans.-替换为译" class="level3" data-number="2.5">
+<h3 data-number="2.5" class="anchored" data-anchor-id="tran.-和-trans.-替换为译"><span class="header-section-number">2.5</span> “tran.” 和 “trans.” 替换为「译」</h3>
 <p>在中文文献中，<code>tran.</code> 和 <code>trans.</code> 应该替换为 <code>译</code> <span id="cite_14"><span class="citation" data-cites="hanqilan2004 yishabai2018 maikeerhekete2012 ludefu2019">(<a href="#ref-hanqilan2004" role="doc-biblioref">韩起澜, 2004</a>; <a href="#ref-yishabai2018" role="doc-biblioref">伊莎白&nbsp;等, 2018</a>; <a href="#ref-maikeerhekete2012" role="doc-biblioref">迈克尔·赫克特, 2012</a>; <a href="#ref-ludefu2019" role="doc-biblioref">陆德芙&nbsp;等, 2019</a>)</span></span>。</p>
 <p>值得一提的是，Lua filter <code>localiz-cnbib.lua</code> 同时支持 author-date 和 numeric 两种引用格式，并且在 <code>link-citation</code> 开启或关闭时都能正常工作。当然，上述替换只考虑了常见中文文献字符本地化的情况，如果有其他字符需要本地化，请自行修改 <code>localiz-cnbib.lua</code> 文件，或者提交 issue 给我。</p>
 <p>需要注意，本项目中 <code>gb-author-date.csl</code> 和 <code>gb-numeric.csl</code> 是我根据 Zotero Styles 网站下载的 CSL 样式文件修改而来。与原始样式文件相比，我修改之后的样式文件更加符合 GB/T 7714-2015 标准，<code>localiz-cnbib.lua</code> 也是根据这两个样式文件的格式来编写的，因此 <code>localiz-cnbib.lua</code> 可能无法正常工作在其他 CSL 样式文件上。</p>
@@ -290,8 +290,8 @@ div.csl-indent {
 <p>为了解决这个问题，本项目提供了一套完整的引号处理方案，具体来说，在 Markdown 中使用直角引号 <code>「</code>、<code>」</code>、<code>『</code>、<code>』</code>，借助以下这几个 Lua filters，可以实现引号的自动转换：</p>
 <ul>
 <li><code>docx-quotes.lua</code>：处理 Word 正文中的引号，使包裹中文的引号看上去更宽。</li>
-<li><code>bib-quotes.lua</code>：处理 Word 和 HTML 参考文献中的引号，使 Word 包裹中文的引号看上去更宽，HTML 将蝌蚪引号转换为直角引号。</li>
-<li><code>latex-quotes.lua</code>：处理 LaTeX 中的引号，将中文直角引号转换为蝌蚪引号</li>
+<li><code>cnbib-quotes.lua</code>：处理 Word 和 HTML 参考文献中的引号，使 Word 包裹中文的引号看上去更宽，HTML 将蝌蚪引号转换为直角引号。</li>
+<li><code>latex-quotes.lua</code>：处理 LaTeX 中的引号，将中文直角引号转换为德语引号（其他东欧语系也有类似的引号），然后通过 <a href="https://ctan.org/pkg/newunicodechar">newunicodechar</a> 宏包将其转换为蝌蚪引号，并对标题中的中文引号进行特别处理。</li>
 </ul>
 <p>这样，无论是在 Word 中还是在 LaTeX 中，都可以得到符合规范的引号效果，而对于 HTML 来说，则做「反向处理」，将包裹中文的蝌蚪引号转换为直角引号。</p>
 </section>
@@ -1105,7 +1105,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","closeEffect":"zoom","selector":".lightbox","loop":false,"descPosition":"bottom"});
+<script>var lightboxQuarto = GLightbox({"loop":false,"closeEffect":"zoom","openEffect":"zoom","selector":".lightbox","descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
