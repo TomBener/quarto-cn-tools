@@ -34,7 +34,7 @@ dependencies:
 QUARTO := @quarto render index.qmd --to
 FILTERS := -L _extensions/citation-backlinks.lua \
 	-L _extensions/localize-cnbib.lua \
-	-L _extensions/bib-quotes.lua \
+	-L _extensions/cnbib-quotes.lua \
 	--filter _extensions/sort-cnbib.py
 
 # Render DOCX
@@ -67,7 +67,7 @@ watermark: pdf
 
 # Render ePub
 epub: dependencies
-	$(QUARTO) $@ -L _extensions/localize-cnbib.lua -L _extensions/bib-quotes.lua \
+	$(QUARTO) $@ -L _extensions/localize-cnbib.lua -L _extensions/cnbib-quotes.lua \
 	--filter _extensions/sort-cnbib.py --filter _extensions/auto-correct.py
 
 # Render Reveal.js slides
