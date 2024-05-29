@@ -75,18 +75,12 @@ function apply_custom_tags(element)
     return pandoc.List({ element })
 end
 
--- Process each paragraph to convert quotes and apply custom XML tags
-function Para(para)
+-- Process each string to convert quotes and apply custom XML tags
+function Str(str)
+    local parsed_elements = parse_quotes(str.text)
     local new_elements = pandoc.List({})
-    for _, element in ipairs(para.content) do
-        if element.t == 'Str' then
-            local parsed_elements = parse_quotes(element.text)
-            for _, parsed_element in ipairs(parsed_elements) do
-                new_elements:insert(parsed_element)
-            end
-        else
-            new_elements:insert(element)
-        end
+    for _, parsed_element in ipairs(parsed_elements) do
+        new_elements:insert(parsed_element)
     end
 
     local result = pandoc.List({})
@@ -97,5 +91,5 @@ function Para(para)
         end
     end
 
-    return pandoc.Para(result)
+    return result
 end
