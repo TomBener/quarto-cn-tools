@@ -1,5 +1,7 @@
 --- 1. Convert straight Chinese quotes to Pandoc's Quoted elements (DoubleQuote and SingleQuote)
 --- 2. Change Quoted elements to the Chinese style by adding XML tags in the docx output
+--- Pandoc 3.2 later has improved support for East Asian languages in docx output, so this filter is only needed for older versions
+--- https://github.com/jgm/pandoc/commit/a6c3945000ad660befac2e406b4717320282a2f8
 
 --- Copyright: © 2024 Tom Ben
 --- License: MIT License

@@ -1,6 +1,6 @@
 --- Replaces Straight quotes with German quotes for intermediate in LaTeX output
 --- Specific processing for headers to avoid issues in PDF bookmarks
---- Quarto cannot disable `smart` extension for LaTeX, so English quotes in headers are not correctly now
+--- Quarto cannot disable `smart` extension for LaTeX, so English quotes in headers are not correct at the moment
 --- Tracking issue: https://github.com/quarto-dev/quarto-cli/issues/7966
 
 --- Copyright: © 2024 Tom Ben

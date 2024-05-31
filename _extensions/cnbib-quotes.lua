@@ -15,7 +15,7 @@ function quotes_in_bib(block)
             local next_text = i < #elements and elements[i + 1].t == "Str" and elements[i + 1].text or ""
 
             if is_chinese(prev_text) or is_chinese(next_text) then
-                if FORMAT:match 'docx' then
+                if FORMAT:match 'docx' then -- Can be removed with Pandoc 3.2 later
                     elements[i] = pandoc.RawInline("openxml",
                         string.format(
                             '<w:r><w:rPr><w:rFonts w:hint="eastAsia"/></w:rPr><w:t xml:space="preserve">%s</w:t></w:r>',
