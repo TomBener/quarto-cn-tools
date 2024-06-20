@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Remove `default-locale="zh-CN"` !!-->
-<style xmlns="https://purl.org/net/xbiblio/csl" version="1.0" class="in-text" names-delimiter=". " name-as-sort-order="all" sort-separator=" " demote-non-dropping-particle="never" initialize-with=" " initialize-with-hyphen="false" page-range-format="expanded">
+<style xmlns="http://purl.org/net/xbiblio/csl" version="1.0" class="in-text" names-delimiter=". " name-as-sort-order="all" sort-separator=" " demote-non-dropping-particle="never" initialize-with=" " initialize-with-hyphen="false" page-range-format="expanded">
   <info>
     <title>China National Standard GB/T 7714-2015 (author-date)</title>
     <id>https://www.zotero.org/styles/china-national-standard-gb-t-7714-2015-author-date</id>
@@ -16,12 +16,12 @@
     </contributor>
     <contributor>
       <name>Tom Ben</name>
-      <email>retompi@gmail.com</email>
+      <uri>https://github.com/TomBener</uri>
     </contributor>
     <category citation-format="author-date"/>
     <category field="generic-base"/>
     <summary>The Chinese GB/T 7714-2015 author-date style</summary>
-    <updated>2024-05-29 22:34:00</updated>
+    <updated>2024-06-20T20:43:20+00:00</updated>
     <rights license="https://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale>
