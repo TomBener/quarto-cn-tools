@@ -33,14 +33,14 @@ Pandoc 使用 CSL（Citation Style Language）来格式化参考文献信息，
 在中文文献中，`eds.` 和 `ed.` 应该替换为 `编`
 [@lihongzhang2007; @liangqichao2018; @yishabai2018;
 @feixiaotong1989; @zuozongtang1986]，
-不管 `ed.` 既可以表示 `编`，也可以表示 `第 X 版`，相对比较复杂，
+不过 `ed.` 既可以表示 `编`，也可以表示 `版`，相对比较复杂，
 请参考下面的例子。
 
-## "ed." 替换为「编」或「第X版」
+## "ed." 替换为「编」或「版」
 
 `ed.` 既可以表示 `编`
 [@feixiaotong1989; @zuozongtang1986]，
-也可以表示 `第 X 版`
+也可以表示 `版`
 [@qinhui2019; @taoxisheng2016]，
 虽然非常灵活，但也给替换带来了一定的困难，
 不过好在判断条件比较明确。

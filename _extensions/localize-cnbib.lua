@@ -105,7 +105,7 @@ function process_bibliography(elem)
                     local ed_num = extract_digits(ed_text)
                     local prev_prev_str = elem.content[i - 4]
                     if ed_num and prev_prev_str and prev_prev_str.t == "Str" and contains_chinese(prev_prev_str.text) then
-                        elem.content[i - 2] = pandoc.Str("第" .. ed_num .. "版.")
+                        elem.content[i - 2] = pandoc.Str(ed_num .. "版.")
                         table.remove(elem.content, i)
                         table.remove(elem.content, i - 1)
                     end
