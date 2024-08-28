@@ -37,6 +37,8 @@ execute:
 format:
   docx:
     reference-doc: _styles/custom.docx
+    template: _styles/custom.openxml
+    include-before-body: [_styles/cover.openxml]
     filters:
       - remove-spaces
       - docx-quotes
@@ -73,6 +75,7 @@ format:
       - _styles/before-body.tex
       - _styles/toc.tex
       - _styles/biblio.tex
+    # pdf-engine: lualatex
     indent: true
     papersize: a4
     twoside: true
