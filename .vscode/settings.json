@@ -1,6 +1,7 @@
 {
     "files.associations": {
-        "*.md": "quarto",
-        "README.md": "markdown"
+        "[0-9]*.md": "quarto",
+        "*.latex": "latex",
+        "*.openxml": "xml"
     }
 }
