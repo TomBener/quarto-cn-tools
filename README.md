@@ -9,6 +9,15 @@ Chinese and English characters. With the help of these templates and scripts,
 you can write your academic papers in Markdown, and convert them into various
 formats like Word, HTML, LaTeX, PDF, and ePub via Quarto with ease.
 
+## Features
+
+- **Render Multiple Formats**: Render DOCX, HTML, PDF, ePub, and Reveal.js slides at once with the same source file, and PDF can be customized for print or with watermark.
+- **Localize Chinese Bibliographies**: Change `et al.` to `等` and other English localization strings to Chinese in citations and references, both author-date and numeric styles are supported.
+- **Sort Chinese Bibliographies**: Sort Chinese bibliographies by Pinyin, and can be customized to sort Chinese entries first or last.
+- **Correct Chinese Quotes**: Tweak Chinese quotes for sophisticated typesetting.
+- **Correct Spaces**: Improve copywriting, correct spaces, words, and punctuations between CJK (Chinese, Japanese, Korean).
+- **Extract Bibliographies**: Extract all bibliographies cited in the document as a BibLaTeX file.
+
 ## Prerequisites
 
 - [Quarto](https://quarto.org), with [Pandoc](https://pandoc.org) included, and
