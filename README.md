@@ -59,7 +59,7 @@ This project uses a Makefile to manage the build process. Here are the available
 - [format-md](_extensions/format-md.py): Preprocess Markdown files for conversion with Quarto.
 - [get-bib](_extensions/get-bib.lua): Extract all bibliographies cited in the document as a BibLaTeX file.
 - [localize-cnbib](_extensions/localize-cnbib.lua): Localize Chinese bibliographies, change `et al.` to `等` and other English localization strings to Chinese.
-- [sort-cnbib](_extensions/sort-cnbib.lua): Sort Chinese bibliographies by Pinyin, and can be customized to sort Chinese entries first or last.
+- [sort-cnbib](_extensions/sort-cnbib.py): Sort Chinese bibliographies by Pinyin, and can be customized to sort Chinese entries first or last.
 
 ## License
 
