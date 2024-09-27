@@ -37,9 +37,9 @@ execute:
 format:
   docx:
     reference-doc: _styles/custom.docx
+    template: _styles/custom.openxml
     filters:
       - remove-spaces
-      - docx-quotes
     date: today
 
   html:
@@ -73,6 +73,7 @@ format:
       - _styles/before-body.tex
       - _styles/toc.tex
       - _styles/biblio.tex
+    # pdf-engine: lualatex
     indent: true
     papersize: a4
     twoside: true

@@ -1,4 +1,4 @@
--- Process quotes for Chinese bibliographies in docx, html and epub outputs
+-- Process quotes for Chinese bibliographies in html and epub outputs
 
 --- Copyright: © 2024 Tom Ben
 --- License: MIT License
@@ -15,12 +15,7 @@ function quotes_in_bib(block)
             local next_text = i < #elements and elements[i + 1].t == "Str" and elements[i + 1].text or ""
 
             if is_chinese(prev_text) or is_chinese(next_text) then
-                if FORMAT:match 'docx' then -- Can be removed with Pandoc 3.2 later
-                    elements[i] = pandoc.RawInline("openxml",
-                        string.format(
-                            '<w:r><w:rPr><w:rFonts w:hint="eastAsia"/></w:rPr><w:t xml:space="preserve">%s</w:t></w:r>',
-                            el.text))
-                elseif FORMAT:match 'html' or FORMAT:match 'epub' then
+                if FORMAT:match 'html' or FORMAT:match 'epub' then
                     local replaced_text = el.text
                     if el.text == "“" then
                         replaced_text = "「"
