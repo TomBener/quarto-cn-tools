@@ -4,6 +4,55 @@
 $for(include-before)$
     $include-before$
 $endfor$
+$-- Title page
+<w:p>
+  <w:pPr>
+    <w:pStyle w:val="BodyText"/>
+  </w:pPr>
+  <w:r>
+    <w:rPr>
+      <w:rFonts w:hint="eastAsia"/>
+    </w:rPr>
+    <w:t>这是一个测试文档</w:t>
+  </w:r>
+</w:p>
+<w:p>
+  <w:r>
+    <w:rPr>
+      <w:rFonts w:eastAsia="LiSu" w:hint="eastAsia"/>
+      <w:b/>
+      <w:bCs/>
+      <w:spacing w:val="20"/>
+      <w:sz w:val="52"/>
+    </w:rPr>
+    <w:t>野鸡大学</w:t>
+  </w:r>
+</w:p>
+<w:p>
+  <w:pPr>
+    <w:spacing w:before="240"/>
+    <w:jc w:val="center"/>
+    <w:rPr>
+      <w:rFonts w:hint="eastAsia"/>
+      <w:b/>
+      <w:sz w:val="32"/>
+    </w:rPr>
+  </w:pPr>
+  <w:r>
+    <w:rPr>
+      <w:rFonts w:eastAsia="STZhongsong" w:hint="eastAsia"/>
+      <w:noProof/>
+      <w:spacing w:val="64"/>
+      <w:sz w:val="52"/>
+    </w:rPr>
+    <w:t>博士学位论文</w:t>
+  </w:r>
+</w:p>
+<w:p>
+  <w:r>
+    <w:br w:type="page"/>
+  </w:r>
+</w:p>
 $if(title)$
     <w:p>
       <w:pPr>

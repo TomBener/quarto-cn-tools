@@ -38,10 +38,8 @@ format:
   docx:
     reference-doc: _styles/custom.docx
     template: _styles/custom.openxml
-    include-before-body: [_styles/cover.openxml]
     filters:
       - remove-spaces
-      - docx-quotes
     date: today
 
   html:

@@ -1,7 +1,0 @@
-title: Tailor Quotation Marks for Chinese Characters in DOCX
-author: Tom Ben
-version: 1.0.0
-quarto-required: ">=1.5.0"
-contributes:
-  filters:
-    - docx-quotes.lua
