@@ -1,4 +1,4 @@
-# Write Chinese Academic Papers with Quarto
+# Writing Chinese Academic Papers with Quarto
 
 [![Publish](https://github.com/TomBener/quarto-cn-tools/actions/workflows/quarto-publish.yml/badge.svg)](https://github.com/TomBener/quarto-cn-tools/actions/workflows/quarto-publish.yml)
 
@@ -47,10 +47,10 @@ This project uses a Makefile to manage the build process. Here are the available
 - `make citebib`: Extract all bibliographies cited as BibLaTeX file `citebib.bib`.
 - `make clean`: Remove auxiliary and output files.
 
-## File Structure
+## Tools
 
 - [confetti](_extensions/confetti/): Send some 🎊 in Reveal.js slides.
-- [ignore-softbreaks](_extensions/ignore-softbreaks/): Emulate Pandoc's extension `east_asian_line_breaks` in Quarto.
+- [ignore-softbreaks](_extensions/ignore-softbreaks/): Emulate Pandoc’s extension `east_asian_line_breaks` in Quarto.
 - [latex-quotes](_extensions/latex-quotes/): Replaces Straight quotes with German quotes for intermediate in LaTeX output, and specific processing for headers to avoid issues in PDF bookmarks.
 - [links-to-citations](_extensions/links-to-citations/): Remove local links but keep the link text as normal citations.
 - [remove-spaces](_extensions/remove-spaces/): Remove spaces before or after Chinese characters in DOCX.

@@ -2,7 +2,7 @@
 
 Pandoc 使用 CSL（[Citation Style Language](https://citationstyles.org/)）来格式化参考文献信息，
 然而 CSL 不支持多语言的参考文献格式化，例如在 Pandoc 中将语言设置为 `en-US` 时，
-所以文献的本地化字符都会被转换为英文，例如 `et al.`、`vol.`、`ed.` 等。
+所有文献的本地化字符都会被转换为英文，例如 `et al.`、`vol.`、`ed.` 等。
 
 本项目使用 Lua filter `localiz-cnbib.lua` 来解决这个问题。
 
