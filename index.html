@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh" xml:lang="zh"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.14">
+<meta name="generator" content="quarto-1.6.28">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -84,11 +84,11 @@ div.csl-indent {
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="index_files/libs/quarto-html/anchor.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-018089954d508eae8a473f0b7f0491f0.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-5223d57514b7f3c9e8f675d86406bf62.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-75d73ece3e5fc6e04b504c8afc5573bd.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-fc7567a641478c5defc9efdff0f817b1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-0775f9d5cac44463e11a5e9c7bc08146.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-dfb86f7cdd0772d66c945b4fdb032b5c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="index_files/libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script src="index_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="index_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
@@ -136,7 +136,7 @@ div.csl-indent {
                 <div>
             <div class="quarto-title-meta-heading">更新于</div>
             <div class="quarto-title-meta-contents">
-              <p class="date-modified">2024 年 9 月 27 日</p>
+              <p class="date-modified">2024 年 10 月 19 日</p>
             </div>
           </div>
                 
@@ -225,7 +225,7 @@ div.csl-indent {
 </section>
 <section id="参考文献本地化" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="参考文献本地化"><span class="header-section-number">2</span> 参考文献本地化</h2>
-<p>Pandoc 使用 CSL（<a href="https://citationstyles.org/">Citation Style Language</a>）来格式化参考文献信息，然而 CSL 不支持多语言的参考文献格式化，例如在 Pandoc 中将语言设置为 <code>en-US</code> 时，所以文献的本地化字符都会被转换为英文，例如 <code>et al.</code>、<code>vol.</code>、<code>ed.</code> 等。</p>
+<p>Pandoc 使用 CSL（<a href="https://citationstyles.org/">Citation Style Language</a>）来格式化参考文献信息，然而 CSL 不支持多语言的参考文献格式化，例如在 Pandoc 中将语言设置为 <code>en-US</code> 时，所有文献的本地化字符都会被转换为英文，例如 <code>et al.</code>、<code>vol.</code>、<code>ed.</code> 等。</p>
 <p>本项目使用 Lua filter <code>localiz-cnbib.lua</code> 来解决这个问题。</p>
 <section id="et-al.-替换为等" class="level3" data-number="2.1">
 <h3 data-number="2.1" class="anchored" data-anchor-id="et-al.-替换为等"><span class="header-section-number">2.1</span> “et al.” 替换为「等」</h3>
@@ -1105,7 +1105,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","loop":false,"closeEffect":"zoom","descPosition":"bottom","openEffect":"zoom"});
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":false,"openEffect":"zoom","descPosition":"bottom"});
 (function() {
   let previousOnload = window.onload;
   window.onload = () => {
