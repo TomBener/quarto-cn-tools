@@ -49,6 +49,9 @@ This project uses a Makefile to manage the build process. Here are the available
 
 ## Tools
 
+> [!NOTE]
+> These tools can also be used individually in your Pandoc or Quarto project.
+
 - [confetti](_extensions/confetti/): Send some 🎊 in Reveal.js slides.
 - [ignore-softbreaks](_extensions/ignore-softbreaks/): Emulate Pandoc’s extension `east_asian_line_breaks` in Quarto.
 - [latex-quotes](_extensions/latex-quotes/): Replaces Straight quotes with German quotes for intermediate in LaTeX output, and specific processing for headers to avoid issues in PDF bookmarks.
