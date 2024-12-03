@@ -35,11 +35,11 @@ formats like Word, HTML, LaTeX, PDF, and ePub via Quarto with ease.
 
 ## Usage
 
-This project uses a Makefile to manage the build process. Here are the available commands:
-
 > [!NOTE]
 > Currently [Lua filters](https://github.com/quarto-dev/quarto-cli/issues/7888) cannot be run after `--citeproc` in Quarto.
 > As a workaround, some extensions are run on the command line in the Makefile. This can be improved in the future.
+
+This project uses a Makefile to manage the build process. Here are the available commands:
 
 - `make` or `make all`: Render DOCX, HTML, PDF, ePub and Reveal.js slides at once.
 - `make docx`: Render DOCX.
