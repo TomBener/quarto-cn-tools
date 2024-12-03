@@ -37,7 +37,7 @@ formats like Word, HTML, LaTeX, PDF, and ePub via Quarto with ease.
 
 > [!NOTE]
 > Currently [Lua filters](https://github.com/quarto-dev/quarto-cli/issues/7888) cannot be run after `--citeproc` in Quarto.
-> As a workaround, some extensions are run on the command line in the Makefile. This can be improved in the future.
+> As a workaround, some extensions are run on the command line in the Makefile. This can be improved [in the future](https://github.com/quarto-dev/quarto-cli/milestone/15).
 
 This project uses a Makefile to manage the build process. Here are the available commands:
 
