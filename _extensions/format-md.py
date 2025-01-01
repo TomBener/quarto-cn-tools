@@ -3,7 +3,7 @@
 # Convert reference-style links to inline links
 # Remove line breaks within a straight Chinese quote
 
-# Copyright: © 2024 Tom Ben
+# Copyright: © 2024–2025 Tom Ben
 # License: MIT License
 
 import re

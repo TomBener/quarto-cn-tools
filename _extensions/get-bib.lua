@@ -2,7 +2,7 @@
 --- Source: https://pandoc.org/lua-filters.html#pandoc.utils.references
 --- https://twitter.com/pandoc_tips/status/1481910457145434113
 
---- Copyright: © 2022–2024 Albert Krewinkel 
+--- Copyright: © 2022–2025 Albert Krewinkel 
 --- License: MIT License
 
 -- *Note*: For BibLaTeX, it is needed to change the following entry name:

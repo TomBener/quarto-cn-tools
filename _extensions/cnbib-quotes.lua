@@ -1,6 +1,6 @@
 -- Process quotes for Chinese bibliographies in html and epub outputs
 
---- Copyright: © 2024 Tom Ben
+--- Copyright: © 2024–2025 Tom Ben
 --- License: MIT License
 
 function is_chinese(text)
