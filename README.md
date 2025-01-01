@@ -15,10 +15,10 @@ formats like Word, HTML, LaTeX, PDF, and ePub via Quarto with ease.
 - **Localize Chinese Bibliographies**: Change `et al.` to `等` and other English localization strings to Chinese in citations and references, both author-date and numeric styles are supported.
 - **Sort Chinese Bibliographies**: Sort Chinese bibliographies by Pinyin, and can be customized to sort Chinese entries first or last.
 - **Correct Chinese Quotes**: Tweak Chinese quotes for sophisticated typesetting.
-- **Correct Spaces**: Improve copywriting, correct spaces, words, and punctuations between CJK (Chinese, Japanese, Korean).
-- **Extract Bibliographies**: Extract all bibliographies cited in the document as a BibLaTeX file.
+- **Correct Spaces**: Improve copywriting, correct spaces, words, and punctuations between CJK.
+- **Extract Bibliographies**: Extract all bibliographies cited in the document as a BibTeX/BibLaTeX file.
 - **Generate Backlinks**: Generate backlinks for bibliography entries to the corresponding citations.
-- **Remove DOI Hyperlinks**: Remove DOI hyperlinks if they are not needed in the bibliography.
+- **Remove DOI Hyperlinks**: Remove DOI hyperlinks formatted by `citeproc` if they are not needed in the bibliography.
 
 ## Prerequisites
 
@@ -36,10 +36,10 @@ formats like Word, HTML, LaTeX, PDF, and ePub via Quarto with ease.
 ## Usage
 
 > [!NOTE]
-> Currently [Lua filters](https://github.com/quarto-dev/quarto-cli/issues/7888) cannot be run after `--citeproc` in Quarto.
+> Currently [Lua filters](https://github.com/quarto-dev/quarto-cli/issues/7888) cannot be run after `citeproc` in Quarto.
 > As a workaround, some extensions are run on the command line in the Makefile. This can be improved [in the future](https://github.com/quarto-dev/quarto-cli/milestone/15).
 
-This project uses a Makefile to manage the build process. Here are the available commands:
+This project uses a [Makefile](Makefile) to manage the build process. Here are the available commands:
 
 - `make` or `make all`: Render DOCX, HTML, PDF, ePub and Reveal.js slides at once.
 - `make docx`: Render DOCX.
@@ -66,7 +66,7 @@ This project uses a Makefile to manage the build process. Here are the available
 - [latex-quotes](_extensions/latex-quotes/): Replaces Straight quotes with German quotes for intermediate in LaTeX output, and specific processing for headers to avoid issues in PDF bookmarks.
 - [links-to-citations](_extensions/links-to-citations/): Remove local links but keep the link text as normal citations.
 - [localize-cnbib](_extensions/localize-cnbib.lua): Localize Chinese bibliographies, change `et al.` to `等` and other English localization strings to Chinese.
-- [remove-doi-hyperlinks](_extensions/remove-doi-hyperlinks.lua): Remove [DOI hyperlinks](https://github.com/jgm/pandoc/issues/10393) in the bibliography. Disabled by default. To enable it, add `-L _extensions/remove-doi-hyperlinks.lua` to the `FILTERS` variable in the Makefile, and remove `<text variable="DOI" prefix="DOI: "/>` in the CSL file.
+- [remove-doi-hyperlinks](_extensions/remove-doi-hyperlinks.lua): Remove [DOI hyperlinks](https://github.com/jgm/pandoc/issues/10393) formatted by `citeproc` in the bibliography. Disabled by default. To enable it, add `-L _extensions/remove-doi-hyperlinks.lua` to the `FILTERS` variable in the Makefile, and remove `<text variable="DOI" prefix="DOI: "/>` in the CSL file.
 - [remove-spaces](_extensions/remove-spaces/): Remove spaces before or after Chinese characters in DOCX.
 - [sort-cnbib](_extensions/sort-cnbib.py): Sort Chinese bibliographies by Pinyin, and can be customized to sort Chinese entries first or last.
 
