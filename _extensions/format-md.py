@@ -2,8 +2,9 @@
 # Randomize footnote identifiers in multiple Quarto files to avoid conflicts
 # Convert reference-style links to inline links
 # Remove line breaks within a straight Chinese quote
+# Reformat display math equations in Ulysses
 
-# Copyright: © 2024–2025 Tom Ben
+# Copyright: © 2024 Tom Ben
 # License: MIT License
 
 import re
@@ -79,6 +80,29 @@ def remove_linebreaks_in_quotes(text):
     return cleaned_text
 
 
+def reformat_math_equations(content):
+    # Reformat display math with labels to block format
+    labeled_pattern = r"\$(.+?)\$ *(\{#.+?\})"
+
+    def replace_with_labeled_block(match):
+        equation = match.group(1).strip()
+        label = match.group(2).strip()
+        return f"$$\n{equation}\n$$ {label}"
+
+    content = re.sub(labeled_pattern, replace_with_labeled_block, content)
+
+    # Reformat display math without labels to block format
+    display_pattern = r"(?<!\$)\$\$([^\$]+?)\$\$(?!\{#)"  # Match `$$ ... $$` without label
+
+    def replace_with_display_block(match):
+        equation = match.group(1).strip()
+        return f"$$\n{equation}\n$$"
+
+    content = re.sub(display_pattern, replace_with_display_block, content)
+
+    return content
+
+
 def process_file(input_file, output_file):
     with open(input_file, "r", encoding="utf-8") as f:
         content = f.read()
@@ -101,6 +125,8 @@ def process_file(input_file, output_file):
     content = convert_reference_to_inline(content)
     # Remove line breaks in quotes
     content = remove_linebreaks_in_quotes(content)
+    # Reformat math equations
+    content = reformat_math_equations(content)
 
     with open(output_file, "w", encoding="utf-8") as f:
         f.write(content)
