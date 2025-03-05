@@ -3,7 +3,7 @@
 --- Created by ChatGPT based on https://taoshu.in/unix/markdown-soft-break.html
 --- Tracking Quarto issue: https://github.com/quarto-dev/quarto-cli/issues/8520
 
---- Copyright: © 2024–2025 Tom Ben
+--- Copyright: © 2024–Present Tom Ben
 --- License: MIT License
 
 function is_ascii(char)

@@ -1,6 +1,6 @@
 --- Remove spaces before or after Chinese characters
 
---- Copyright: © 2024–2025 Tom Ben
+--- Copyright: © 2024–Present Tom Ben
 --- License: MIT License
 
 -- Check if the character is non-ASCII (potentially a Chinese character).

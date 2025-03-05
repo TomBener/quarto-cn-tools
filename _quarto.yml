@@ -97,7 +97,7 @@ format:
 
   epub:
     epub-cover-image: figures/cover.png
-    rights: © 2024--2025 Tom Ben
+    rights: © 2024--Present Tom Ben
     date: today
 
   revealjs:

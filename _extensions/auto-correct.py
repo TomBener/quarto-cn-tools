@@ -1,6 +1,6 @@
 # Improve copywriting, correct spaces, words, and punctuations between CJK and English with AutoCorrect
 
-# Copyright: © 2024–2025 Tom Ben
+# Copyright: © 2024–Present Tom Ben
 # License: MIT License
 
 import panflute as pf

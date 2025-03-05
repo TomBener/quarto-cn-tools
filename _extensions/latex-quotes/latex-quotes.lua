@@ -3,7 +3,7 @@
 --- Quarto cannot disable `smart` extension for LaTeX, so English quotes in headers are not correct at the moment
 --- Tracking issue: https://github.com/quarto-dev/quarto-cli/issues/7966
 
---- Copyright: © 2024–2025 Tom Ben
+--- Copyright: © 2024–Present Tom Ben
 --- License: MIT License
 
 function Str(el)

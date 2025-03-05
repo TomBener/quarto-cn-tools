@@ -1,7 +1,7 @@
 # Sort Chinese bibliography entries by Pinyin
 # Be sure to remove the comment block ```{=comment}```
 
-# Copyright: © 2024–2025 Tom Ben
+# Copyright: © 2024–Present Tom Ben
 # License: MIT License
 
 import panflute as pf

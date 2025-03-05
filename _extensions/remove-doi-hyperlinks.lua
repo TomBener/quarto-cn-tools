@@ -1,6 +1,6 @@
 --- Remove hyperlinks from DOIs while preserving the DOI text
 
---- Copyright: © 2024–2025 Tom Ben
+--- Copyright: © 2024–Present Tom Ben
 --- License: MIT License
 
 function Link(el)

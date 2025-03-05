@@ -4,7 +4,7 @@
 # Remove line breaks within a straight Chinese quote
 # Reformat display math equations in Ulysses
 
-# Copyright: © 2024 Tom Ben
+# Copyright: © 2024–Present Tom Ben
 # License: MIT License
 
 import re

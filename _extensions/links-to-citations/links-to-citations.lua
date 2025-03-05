@@ -1,7 +1,7 @@
 --- Remove local links but keep the link text as normal citations
 --- Reference: https://stackoverflow.com/a/75559075/19418090
 
---- Copyright: © 2023 Albert Krewinkel, 2024–2025 Tom Ben
+--- Copyright: © 2023 Albert Krewinkel, 2024–Present Albert Krewinkel, Tom Ben
 --- License: MIT License
 
 function Link(link)
