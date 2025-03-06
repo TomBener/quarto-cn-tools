@@ -6,8 +6,8 @@
 <script src="slides_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="slides_files/libs/quarto-html/quarto-syntax-highlighting-66ab7fd5e73b7f0a764e0d49b3e29ab1.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.13">
+<link href="slides_files/libs/quarto-html/quarto-syntax-highlighting-8c4c3d43a67d5579f14f1e6229e0c929.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.14">
 
   <meta name="author" content="Tom Ben">
   <title>Quarto Presentations</title>
@@ -94,7 +94,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto-a7c9e17547be542bc46189a72b27449e.css">
+  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto-d3f47a3c4c1bb73efd0699f1ef4303b6.css">
   <link href="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -206,7 +206,7 @@
   <p class="author">Tom Ben</p>
   <p class="supervisor">导师姓名</p>
   <p class="institute">所在学校名称</p>
-  <p class="date">2025 年 3 月 5 日</p>
+  <p class="date">2025 年 3 月 6 日</p>
 </section>
 
 <section id="hello-there" class="slide level2">
@@ -1093,9 +1093,6 @@ a_{21}&amp; =b_{21}&amp;
 <section id="themes" class="slide level2">
 <h2>Themes</h2>
 <p>10 Built-in Themes (or <a href="https://quarto.org/docs/presentations/revealjs/themes.html#creating-themes">create your own</a>)</p>
-<div>
-
-</div>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
@@ -1114,9 +1111,6 @@ a_{21}&amp; =b_{21}&amp;
 <h2>Easy Navigation</h2>
 <div style="margin-bottom: 0.9em;">
 <p>Quickly jump to other parts of your presentation</p>
-</div>
-<div>
-
 </div>
 <div class="quarto-layout-panel" data-layout="[1, 20]">
 <div class="quarto-layout-row">
@@ -1138,9 +1132,6 @@ a_{21}&amp; =b_{21}&amp;
 <div style="margin-bottom: 0.9em;">
 <p>Free form drawing and slide annotations</p>
 </div>
-<div>
-
-</div>
 <div class="quarto-layout-panel" data-layout="[1, 20]">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 4.8%;justify-content: center;">
@@ -1150,9 +1141,6 @@ a_{21}&amp; =b_{21}&amp;
 <p>Use the chalkboard button at the bottom left of the slide to toggle the chalkboard.</p>
 </div>
 </div>
-</div>
-<div>
-
 </div>
 <div class="quarto-layout-panel" data-layout="[1, 20]">
 <div class="quarto-layout-row">
@@ -1440,44 +1428,6 @@ a_{21}&amp; =b_{21}&amp;
         ]
       });
     </script>
-    
-    <script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
-    </script>
-
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
