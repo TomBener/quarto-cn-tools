@@ -30,7 +30,19 @@ def special_pinyin(text):
     if contains_chinese(text):
         name = text.split(",")[0] if "," in text else text
         surname = name[0]
-        return surname_map.get(surname, "".join([i[0] for i in pinyin(name, style=Style.TONE3)]))
+
+        # 获取完整姓名的拼音
+        full_pinyin = pinyin(name, style=Style.TONE3)
+        full_pinyin_text = "".join([i[0] for i in full_pinyin])
+
+        # 如果姓氏在多音字列表中，替换拼音的首个发音
+        if surname in surname_map:
+            surname_py = surname_map[surname]
+            # 根据姓氏的长度替换拼音
+            surname_py_len = len(pinyin(surname, style=Style.TONE3)[0][0])
+            full_pinyin_text = surname_py + full_pinyin_text[surname_py_len:]
+
+        return full_pinyin_text
     else:
         return None
 
@@ -55,11 +67,11 @@ def action(elem, doc):
 def finalize(doc):
     doc.chinese_entries.sort(key=lambda x: special_pinyin(pf.stringify(x)))
 
-    # Replace the Div container content with sorted entries
+    # 用排序后的条目替换 Div 中的内容
     for elem in doc.content:
         if isinstance(elem, pf.Div) and "references" in elem.classes:
-            # Sort the Chinese bibliography entries by Pinyin and append them to the end of the non-Chinese entries
-            # Swap the entries below can change the order of Chinese and non-Chinese bibliography entries
+            # 按拼音排序中文参考文献条目，并将其附加到非中文条目的末尾
+            # 交换加号前后的顺序可以改变中文和非中文参考文献条目的顺序
             elem.content = doc.non_chinese_entries + doc.chinese_entries
             break
 
