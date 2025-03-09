@@ -1,4 +1,5 @@
 --- Remove hyperlinks from DOIs while preserving the DOI text
+--- Useful for styles without DOIs but you don't want to edit the bibliography file
 
 --- Copyright: © 2024–Present Tom Ben
 --- License: MIT License

@@ -1,6 +1,6 @@
 --- Get a BibTeX/BibLaTeX or CSL JSON file cited from a large database
 --- Source: https://pandoc.org/lua-filters.html#pandoc.utils.references
---- https://twitter.com/pandoc_tips/status/1481910457145434113
+--- https://fosstodon.org/@pandoc/109549882954402931
 
 --- Copyright: © 2022–Present Albert Krewinkel 
 --- License: MIT License

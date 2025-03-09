@@ -1,4 +1,4 @@
---- Convert Right-Angle Quotes to Curly Quotes in DOCX
+--- Convert straight angle quotation marks to curly quotation marks in DOCX
 
 --- Copyright: © 2025–Present Tom Ben
 --- License: MIT License

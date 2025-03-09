@@ -1,7 +1,7 @@
 # Convert *.md files to *.qmd files and pre-process them
 # Randomize footnote identifiers in multiple Quarto files to avoid conflicts
 # Convert reference-style links to inline links
-# Remove line breaks within a straight Chinese quote
+# Remove line breaks within a straight angle quotation mark
 # Reformat display math equations in Ulysses
 
 # Copyright: © 2024–Present Tom Ben
