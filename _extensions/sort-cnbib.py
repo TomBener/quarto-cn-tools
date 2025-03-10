@@ -17,10 +17,10 @@ def special_pinyin(text):
     surname_map = {
         '葛': 'ge3',
         '阚': 'kan4',
-        '仇': 'qiu2',
         '区': 'ou1',
         '朴': 'piao2',
         '覃': 'qin2',
+        '仇': 'qiu2',
         '任': 'ren2',
         '单': 'shan4',
         '解': 'xie4',
