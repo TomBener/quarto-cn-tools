@@ -1,13 +1,13 @@
-# Writing Chinese Academic Papers with Quarto
+# Quarto Template for Chinese Academic Writing
 
 [![Publish](https://github.com/TomBener/quarto-cn-tools/actions/workflows/quarto-publish.yml/badge.svg)](https://github.com/TomBener/quarto-cn-tools/actions/workflows/quarto-publish.yml)
 
 This repository provides a comprehensive guide and toolset for writing academic
-papers in Chinese, such as the localization and sorting of Chinese
-bibliographies, conversion of Chinese quotes, and correcting spaces between
+papers in Chinese, such as the localization and sorting of Chinese citations and
+bibliographies, conversion of Chinese quotation marks, and correcting spaces between
 Chinese and English characters. With the help of these templates and scripts,
 you can write your academic papers in Markdown, and convert them into various
-formats like Word, HTML, LaTeX, PDF, and ePub via Quarto with ease.
+formats like Word, HTML, LaTeX, PDF, and ePub via Quarto.
 
 ## Features
 
