@@ -1,15 +1,15 @@
-# `make` or `make all`: Render DOCX, HTML, PDF, ePub and Reveal.js slides at once.
+# `make` or `make all`: Render DOCX, HTML, PDF, EPUB and Reveal.js slides at once.
 # `make docx`: Render DOCX.
 # `make html`: Render HTML.
 # `make pdf`: Render PDF.
-# `make epub`: Render ePub.
+# `make epub`: Render EPUB.
 # `make slides`: Render Reveal.js slides.
 # `make print`: Render PDF for print.
 # `make watermark`: Render PDF with watermark.
 # `make citebib`: Extract all bibliographies cited as BibLaTeX file `citebib.bib`.
 # `make clean`: Remove auxiliary and output files.
 
-# Render DOCX, HTML, PDF, ePub and Reveal.js slides at once
+# Render DOCX, HTML, PDF, EPUB and Reveal.js slides at once
 .PHONY: all
 all: docx html pdf epub slides
 
@@ -66,7 +66,7 @@ watermark: PDF_OPTION := -V watermark=true
 watermark: PDF_OUTPUT := watermark.pdf
 watermark: pdf
 
-# Render ePub
+# Render EPUB
 epub: dependencies
 	$(QUARTO) $@ -L _extensions/localize-cnbib.lua -L _extensions/cnbib-quotes.lua \
 	--filter _extensions/sort-cnbib.py --filter _extensions/auto-correct.py

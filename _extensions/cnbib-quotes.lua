@@ -1,4 +1,4 @@
--- Process quotes for Chinese bibliographies in HTML and ePub
+-- Process quotes for Chinese bibliographies in HTML and EPUB
 
 --- Copyright: © 2024–Present Tom Ben
 --- License: MIT License

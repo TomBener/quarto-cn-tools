@@ -7,11 +7,11 @@ papers in Chinese, such as the localization and sorting of Chinese citations and
 bibliographies, conversion of Chinese quotation marks, and correcting spaces between
 Chinese and English characters. With the help of these templates and scripts,
 you can write your academic papers in Markdown, and convert them into various
-formats like Word, HTML, LaTeX, PDF, and ePub via Quarto.
+formats like Word, HTML, LaTeX, PDF, and EPUB via Quarto.
 
 ## Features
 
-- **Render Multiple Formats**: Render DOCX, HTML, PDF, ePub, and Reveal.js slides at once with the same source file, and PDF can be customized for print or with watermark.
+- **Render Multiple Formats**: Render DOCX, HTML, PDF, EPUB, and Reveal.js slides at once with the same source file, and PDF can be customized for print or with watermark.
 - **Localize Chinese Bibliographies**: Change `et al.` to `等` and other English localization strings to Chinese in citations and references, both author-date and numeric styles are supported.
 - **Sort Chinese Bibliographies**: Sort Chinese bibliographies by Pinyin, and can be customized to sort Chinese entries first or last.
 - **Correct Chinese Quotes**: Tweak Chinese quotes for sophisticated typesetting.
@@ -41,11 +41,11 @@ formats like Word, HTML, LaTeX, PDF, and ePub via Quarto.
 
 This project uses a [Makefile](Makefile) to manage the build process. Here are the available commands:
 
-- `make` or `make all`: Render DOCX, HTML, PDF, ePub and Reveal.js slides at once.
+- `make` or `make all`: Render DOCX, HTML, PDF, EPUB and Reveal.js slides at once.
 - `make docx`: Render DOCX.
 - `make html`: Render HTML.
 - `make pdf`: Render PDF.
-- `make epub`: Render ePub.
+- `make epub`: Render EPUB.
 - `make slides`: Render Reveal.js slides.
 - `make print`: Render PDF for print.
 - `make watermark`: Render PDF with watermark.
@@ -60,7 +60,7 @@ This project uses a [Makefile](Makefile) to manage the build process. Here are t
 - [auto-correct](_extensions/auto-correct.py): Improve copywriting, correct spaces, words, and punctuations between CJK and English with AutoCorrect.
 - [citation-backlinks](_extensions/citation-backlinks.lua): Generate backlinks for bibliography entries to the corresponding citations.
 - [confetti](_extensions/confetti/): Send some 🎊 in Reveal.js slides.
-- [cnbib-quotes](_extensions/cnbib-quotes.lua): Process quotes for Chinese bibliographies in HTML and ePub outputs.
+- [cnbib-quotes](_extensions/cnbib-quotes.lua): Process quotes for Chinese bibliographies in HTML and EPUB outputs.
 - [docx-quotes](_extensions/docx-quotes/): Convert straight angle quotation marks to curly quotation marks in DOCX.
 - [format-md](_extensions/format-md.py): Preprocess Markdown files for conversion with Quarto.
 - [get-bib](_extensions/get-bib.lua): Extract all bibliographies cited in the document as a BibLaTeX file.
