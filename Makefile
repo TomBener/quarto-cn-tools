@@ -7,24 +7,35 @@
 # `make print`: Render PDF for print.
 # `make watermark`: Render PDF with watermark.
 # `make citebib`: Extract all bibliographies cited as BibLaTeX file `citebib.bib`.
+# `make citedoc`: Copy cited reference files to a specified directory.
 # `make clean`: Remove auxiliary and output files.
 
 # Render DOCX, HTML, PDF, EPUB and Reveal.js slides at once
 .PHONY: all
 all: docx html pdf epub slides
 
+# Extract all cited bibliographies
+.PHONY: citebib
+citebib:
+	@python _extensions/citation-tools.py --extract
+
+# Copy all cited files to a folder
+.PHONY: citedoc
+citedoc:
+	@python _extensions/citation-tools.py --copy
+
 # Pandoc command for extracting bibliographies
-CITE := @pandoc \
-	--quiet \
-	--file-scope \
-	--lua-filter _extensions/get-bib.lua \
-	--wrap=preserve \
-	contents/[0-9]*.md
+# CITE := @pandoc \
+# 	--quiet \
+# 	--file-scope \
+# 	--lua-filter _extensions/get-bib.lua \
+# 	--wrap=preserve \
+# 	contents/[0-9]*.md
 
 # Extract all bibliographies cited as `citebib.bib`
-citebib:
-	$(CITE) --bibliography bibliography.bib --to biblatex | \
-	perl -pe 's/^}$$/}\n/ if !eof' > citebib.bib
+# citebib:
+# 	$(CITE) --bibliography bibliography.bib --to biblatex | \
+# 	perl -pe 's/^}$$/}\n/ if !eof' > citebib.bib
 
 # Target for generating and processing QMD files
 .PHONY: dependencies

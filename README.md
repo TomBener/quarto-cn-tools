@@ -50,6 +50,7 @@ This project uses a [Makefile](Makefile) to manage the build process. Here are t
 - `make print`: Render PDF for print.
 - `make watermark`: Render PDF with watermark.
 - `make citebib`: Extract all bibliographies cited as BibLaTeX file `citebib.bib`.
+- `make citedoc`: Copy cited reference files to a specified directory.
 - `make clean`: Remove auxiliary and output files.
 
 ## Tools
@@ -59,11 +60,12 @@ This project uses a [Makefile](Makefile) to manage the build process. Here are t
 
 - [auto-correct](_extensions/auto-correct.py): Improve copywriting, correct spaces, words, and punctuations between CJK and English with AutoCorrect.
 - [citation-backlinks](_extensions/citation-backlinks.lua): Generate backlinks for bibliography entries to the corresponding citations.
+- [citation-tools](_extensions/citation-tools.py): Extract citation keys from Markdown files, and copy cited reference files to a specified directory.
 - [confetti](_extensions/confetti/): Send some 🎊 in Reveal.js slides.
 - [cnbib-quotes](_extensions/cnbib-quotes.lua): Process quotes for Chinese bibliographies in HTML and EPUB outputs.
 - [docx-quotes](_extensions/docx-quotes/): Convert straight angle quotation marks to curly quotation marks in DOCX.
 - [format-md](_extensions/format-md.py): Preprocess Markdown files for conversion with Quarto.
-- [get-bib](_extensions/get-bib.lua): Extract all bibliographies cited in the document as a BibLaTeX file.
+- [get-bib](_extensions/get-bib.lua): Extract all bibliographies cited in the document as a BibLaTeX file.[^bib]
 - [ignore-softbreaks](_extensions/ignore-softbreaks/): Emulate Pandoc’s extension `east_asian_line_breaks` [in Quarto](https://github.com/quarto-dev/quarto-cli/issues/8520).
 - [latex-quotes](_extensions/latex-quotes/): Replaces straight quotes with German quotes for intermediate in LaTeX output, and specific processing for headers to avoid issues in PDF bookmarks.
 - [links-to-citations](_extensions/links-to-citations/): Remove local links but keep the link text as normal citations.
@@ -75,3 +77,5 @@ This project uses a [Makefile](Makefile) to manage the build process. Here are t
 ## License
 
 This project is licensed under the MIT License, see the [LICENSE](LICENSE) file for details.
+
+[^bib]: The `get-bib` tool is based on Pandoc, for a better and more flexible implementation, use [citation-tools](_extensions/citation-tools.py) instead.
