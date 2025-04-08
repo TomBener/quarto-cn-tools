@@ -16,7 +16,7 @@ formats like Word, HTML, LaTeX, PDF, and EPUB via Quarto.
 - **Sort Chinese Bibliographies**: Sort Chinese bibliographies by Pinyin, and can be customized to sort Chinese entries first or last.
 - **Correct Chinese Quotes**: Tweak Chinese quotes for sophisticated typesetting.
 - **Correct Spaces**: Improve copywriting, correct spaces, words, and punctuations between CJK.
-- **Extract Bibliographies**: Extract all bibliographies cited in the document as a BibTeX/BibLaTeX file.
+- **Extract Bibliographies**: Extract all bibliographies cited in the document as a BibTeX/BibLaTeX file, and copy cited reference files to a specified directory.
 - **Generate Backlinks**: Generate backlinks for bibliography entries to the corresponding citations.
 - **Remove DOI Hyperlinks**: Remove DOI hyperlinks formatted by `citeproc` if they are not needed in the bibliography.
 
@@ -78,4 +78,4 @@ This project uses a [Makefile](Makefile) to manage the build process. Here are t
 
 This project is licensed under the MIT License, see the [LICENSE](LICENSE) file for details.
 
-[^bib]: The `get-bib` tool is based on Pandoc, for a better and more flexible implementation, use [citation-tools](_extensions/citation-tools.py) instead.
+[^bib]: The `get-bib` tool is based on Pandoc, for a better and more flexible implementation, use `citation-tools` instead.
