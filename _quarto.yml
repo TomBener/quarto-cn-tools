@@ -28,6 +28,7 @@ nocite: |
 filters:
   - links-to-citations
   - ignore-softbreaks
+  - fangsong
 execute:
   cache: true
   freeze: auto
