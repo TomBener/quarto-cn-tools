@@ -1,8 +1,4 @@
-title: 用 Quarto 写作中文学术论文
-subtitle: 一个简单的示例
-author:
-  name: Tom Ben
-  email: email@example.edu
+title: 零碳园区建设方案
 student-id: 1234567890
 supervisor: 导师姓名
 institute: 所在学校名称
@@ -10,10 +6,10 @@ major: 专业名称
 date-format: "YYYY年M月D日"
 project:
   output-dir: outputs
-number-sections: true
+# number-sections: true
 link-citations: true
-toc: true
-toc-depth: 4  # `3` is enouth, `4` is set as `shift-heading-level-by: 1` is enabled for html
+# toc: true
+# toc-depth: 4  # `3` is enouth, `4` is set as `shift-heading-level-by: 1` is enabled for html
 toc-title: 目录
 crossref:
   fig-title: 图
@@ -23,12 +19,10 @@ crossref:
 reference-section-title: 参考文献
 bibliography: bibliography.bib
 csl: _styles/gb-author-date.csl  # Author-year style, `gb-numeric.csl` for numeric style
-nocite: |
-  @*
 filters:
   - links-to-citations
   - ignore-softbreaks
-  - fangsong
+  - custom-fonts
 execute:
   cache: true
   freeze: auto
@@ -40,7 +34,7 @@ format:
     reference-doc: _styles/custom.docx
     template: _styles/custom.openxml
     filters:
-      - remove-spaces
+      # - remove-spaces
       - docx-quotes
     date: today
 
