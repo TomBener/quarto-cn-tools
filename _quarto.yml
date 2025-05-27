@@ -74,7 +74,7 @@ format:
       - _styles/before-body.tex
       - _styles/toc.tex
       - _styles/biblio.tex
-    # pdf-engine: lualatex
+    pdf-engine: xelatex
     indent: true
     papersize: a4
     twoside: true
