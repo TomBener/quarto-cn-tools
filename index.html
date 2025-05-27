@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="zh" xml:lang="zh"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.21">
+<meta name="generator" content="quarto-1.8.11">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -82,16 +82,19 @@ div.csl-indent {
 <script src="index_files/libs/clipboard/clipboard.min.js"></script>
 <script src="index_files/libs/quarto-html/quarto.js" type="module"></script>
 <script src="index_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="index_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="index_files/libs/quarto-html/popper.min.js"></script>
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="index_files/libs/quarto-html/anchor.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-06d562e6012464ac2de5f5326e0cb04e.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-b2bd955b7378b94aa8c2ba4fafa553c9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-09b140d2d032adf2aedb8b099be3ee13.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-26de2546b5e3740ec1b2731ec027ff26.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-09b140d2d032adf2aedb8b099be3ee13.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-dark-1da9e52d32fa50195b38b84e07907378.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="index_files/libs/bootstrap/bootstrap-078bf4b823d96fa5f06434cb5c611202.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-eb1f608a8b704a8fa33d6fba04bebd63.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-dark-48ff194a308142fbe0a02425d12ec4c4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="index_files/libs/bootstrap/bootstrap-eb1f608a8b704a8fa33d6fba04bebd63.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="index_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="index_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="index_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -99,83 +102,7 @@ div.csl-indent {
 
 </head>
 
-<body class="quarto-light">
-
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">用 Quarto 写作中文学术论文</h1>
-            <p class="subtitle lead">一个简单的示例</p>
-          </div>
-
-    
-    <div class="quarto-title-meta-container">
-      <div class="quarto-title-meta-column-start">
-            <div class="quarto-title-meta-author">
-          <div class="quarto-title-meta-heading">作者</div>
-          <div class="quarto-title-meta-heading">学校</div>
-          
-                <div class="quarto-title-meta-contents">
-            <p class="author">Tom Ben <a href="mailto:email@example.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
-          </div>
-                <div class="quarto-title-meta-contents">
-                    <p class="affiliation">
-                        所在学校名称
-                      </p>
-                  </div>
-                    </div>
-        
-        <div class="quarto-title-meta">
-
-                      
-                <div>
-            <div class="quarto-title-meta-heading">发布于</div>
-            <div class="quarto-title-meta-contents">
-              <p class="date">2024 年 5 月 26 日</p>
-            </div>
-          </div>
-          
-                <div>
-            <div class="quarto-title-meta-heading">更新于</div>
-            <div class="quarto-title-meta-contents">
-              <p class="date-modified">2025 年 4 月 8 日</p>
-            </div>
-          </div>
-                
-              </div>
-      </div>
-      <div class="quarto-title-meta-column-end quarto-other-formats-target">
-      <div class="quarto-alternate-formats"><div class="quarto-title-meta-heading">其他格式</div><div class="quarto-title-meta-contents"><p><a href="index.docx"><i class="bi bi-file-word"></i>MS Word</a></p></div><div class="quarto-title-meta-contents"><p><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></p></div><div class="quarto-title-meta-contents"><p><a href="index.epub"><i class="bi bi-file"></i>ePub</a></p></div><div class="quarto-title-meta-contents"><p><a href="slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></p></div></div></div>
-    </div>
-
-
-
-    <div class="quarto-other-links-text-target">
-    </div>  </div>
-</header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-  <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">目录</h2>
-   
-  <ul>
-  <li><a href="#前言" id="toc-前言" class="nav-link active" data-scroll-target="#前言"><span class="header-section-number">1</span> 前言</a></li>
-  <li><a href="#参考文献本地化" id="toc-参考文献本地化" class="nav-link" data-scroll-target="#参考文献本地化"><span class="header-section-number">2</span> 参考文献本地化</a>
-  <ul>
-  <li><a href="#et-al.-替换为等" id="toc-et-al.-替换为等" class="nav-link" data-scroll-target="#et-al.-替换为等"><span class="header-section-number">2.1</span> “et al.” 替换为「等」</a></li>
-  <li><a href="#vol.-替换为第x卷" id="toc-vol.-替换为第x卷" class="nav-link" data-scroll-target="#vol.-替换为第x卷"><span class="header-section-number">2.2</span> “vol.” 替换为「第 X 卷」</a></li>
-  <li><a href="#ed.-和-eds.-替换为编" id="toc-ed.-和-eds.-替换为编" class="nav-link" data-scroll-target="#ed.-和-eds.-替换为编"><span class="header-section-number">2.3</span> “ed.” 和 “eds.” 替换为「编」</a></li>
-  <li><a href="#ed.-替换为编或版" id="toc-ed.-替换为编或版" class="nav-link" data-scroll-target="#ed.-替换为编或版"><span class="header-section-number">2.4</span> “ed.” 替换为「编」或「版」</a></li>
-  <li><a href="#tran.-和-trans.-替换为译" id="toc-tran.-和-trans.-替换为译" class="nav-link" data-scroll-target="#tran.-和-trans.-替换为译"><span class="header-section-number">2.5</span> “tran.” 和 “trans.” 替换为「译」</a></li>
-  </ul></li>
-  <li><a href="#中文参考文献按照拼音排序" id="toc-中文参考文献按照拼音排序" class="nav-link" data-scroll-target="#中文参考文献按照拼音排序"><span class="header-section-number">3</span> 中文参考文献按照拼音排序</a></li>
-  <li><a href="#中文引号的处理" id="toc-中文引号的处理" class="nav-link" data-scroll-target="#中文引号的处理"><span class="header-section-number">4</span> 中文引号的处理</a></li>
-  <li><a href="#中西文盘古之白" id="toc-中西文盘古之白" class="nav-link" data-scroll-target="#中西文盘古之白"><span class="header-section-number">5</span> 中西文盘古之白</a></li>
-  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">参考文献</a></li>
-  </ul>
-</nav>
-</div>
-<main class="content quarto-banner-title-block" id="quarto-document-content">
-<script id="quarto-html-before-body" type="application/javascript">
+<body class="quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -193,14 +120,26 @@ div.csl-indent {
         toggleBodyColorMode(bsSheetEl);
       }
     }
-    toggleBodyColorPrimary();
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
     const toggleColorMode = (alternate) => {
       // Switch the stylesheets
       const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
       const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
       manageTransitions('#quarto-margin-sidebar .nav-link', false);
       if (alternate) {
-        disableStylesheet(primaryStylesheets)
+        // note: dark is layered on light, we don't disable primary!
         enableStylesheet(alternateStylesheets);
         for (const sheetNode of alternateStylesheets) {
           if (sheetNode.id === "quarto-bootstrap") {
@@ -214,17 +153,7 @@ div.csl-indent {
       }
       manageTransitions('#quarto-margin-sidebar .nav-link', true);
       // Switch the toggles
-      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
-      for (let i=0; i < toggles.length; i++) {
-        const toggle = toggles[i];
-        if (toggle) {
-          if (alternate) {
-            toggle.classList.add("alternate");
-          } else {
-            toggle.classList.remove("alternate");
-          }
-        }
-      }
+      setColorSchemeToggle(alternate)
       // Hack to workaround the fact that safari doesn't
       // properly recolor the scrollbar when toggling (#1455)
       if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
@@ -288,7 +217,37 @@ div.csl-indent {
         return localAlternateSentinel;
       }
     }
-      const darkModeDefault = false;
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
     // Dark / light mode switch
     window.quartoToggleColorScheme = () => {
@@ -297,6 +256,7 @@ div.csl-indent {
       toggleColorMode(toAlternate);
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
     };
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
@@ -305,6 +265,82 @@ div.csl-indent {
       toggleColorMode(false);
     }
   </script>
+
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">用 Quarto 写作中文学术论文</h1>
+            <p class="subtitle lead">一个简单的示例</p>
+          </div>
+
+    
+    <div class="quarto-title-meta-container">
+      <div class="quarto-title-meta-column-start">
+            <div class="quarto-title-meta-author">
+          <div class="quarto-title-meta-heading">作者</div>
+          <div class="quarto-title-meta-heading">学校</div>
+          
+                <div class="quarto-title-meta-contents">
+            <p class="author">Tom Ben <a href="mailto:email@example.edu" class="quarto-title-author-email"><i class="bi bi-envelope"></i></a> </p>
+          </div>
+                <div class="quarto-title-meta-contents">
+                    <p class="affiliation">
+                        所在学校名称
+                      </p>
+                  </div>
+                    </div>
+        
+        <div class="quarto-title-meta">
+
+                      
+                <div>
+            <div class="quarto-title-meta-heading">发布于</div>
+            <div class="quarto-title-meta-contents">
+              <p class="date">2024 年 5 月 26 日</p>
+            </div>
+          </div>
+          
+                <div>
+            <div class="quarto-title-meta-heading">更新于</div>
+            <div class="quarto-title-meta-contents">
+              <p class="date-modified">2025 年 5 月 27 日</p>
+            </div>
+          </div>
+                
+              </div>
+      </div>
+      <div class="quarto-title-meta-column-end quarto-other-formats-target">
+      <div class="quarto-alternate-formats"><div class="quarto-title-meta-heading">其他格式</div><div class="quarto-title-meta-contents"><p><a href="index.docx"><i class="bi bi-file-word"></i>MS Word</a></p></div><div class="quarto-title-meta-contents"><p><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></p></div><div class="quarto-title-meta-contents"><p><a href="index.epub"><i class="bi bi-file"></i>ePub</a></p></div><div class="quarto-title-meta-contents"><p><a href="slides.html"><i class="bi bi-file-slides"></i>RevealJS</a></p></div></div></div>
+    </div>
+
+
+
+    <div class="quarto-other-links-text-target">
+    </div>  </div>
+</header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">目录</h2>
+   
+  <ul>
+  <li><a href="#前言" id="toc-前言" class="nav-link active" data-scroll-target="#前言"><span class="header-section-number">1</span> 前言</a></li>
+  <li><a href="#参考文献本地化" id="toc-参考文献本地化" class="nav-link" data-scroll-target="#参考文献本地化"><span class="header-section-number">2</span> 参考文献本地化</a>
+  <ul>
+  <li><a href="#et-al.-替换为等" id="toc-et-al.-替换为等" class="nav-link" data-scroll-target="#et-al.-替换为等"><span class="header-section-number">2.1</span> “et al.” 替换为「等」</a></li>
+  <li><a href="#vol.-替换为第x卷" id="toc-vol.-替换为第x卷" class="nav-link" data-scroll-target="#vol.-替换为第x卷"><span class="header-section-number">2.2</span> “vol.” 替换为「第 X 卷」</a></li>
+  <li><a href="#ed.-和-eds.-替换为编" id="toc-ed.-和-eds.-替换为编" class="nav-link" data-scroll-target="#ed.-和-eds.-替换为编"><span class="header-section-number">2.3</span> “ed.” 和 “eds.” 替换为「编」</a></li>
+  <li><a href="#ed.-替换为编或版" id="toc-ed.-替换为编或版" class="nav-link" data-scroll-target="#ed.-替换为编或版"><span class="header-section-number">2.4</span> “ed.” 替换为「编」或「版」</a></li>
+  <li><a href="#tran.-和-trans.-替换为译" id="toc-tran.-和-trans.-替换为译" class="nav-link" data-scroll-target="#tran.-和-trans.-替换为译"><span class="header-section-number">2.5</span> “tran.” 和 “trans.” 替换为「译」</a></li>
+  </ul></li>
+  <li><a href="#中文参考文献按照拼音排序" id="toc-中文参考文献按照拼音排序" class="nav-link" data-scroll-target="#中文参考文献按照拼音排序"><span class="header-section-number">3</span> 中文参考文献按照拼音排序</a></li>
+  <li><a href="#中文引号的处理" id="toc-中文引号的处理" class="nav-link" data-scroll-target="#中文引号的处理"><span class="header-section-number">4</span> 中文引号的处理</a></li>
+  <li><a href="#中西文盘古之白" id="toc-中西文盘古之白" class="nav-link" data-scroll-target="#中西文盘古之白"><span class="header-section-number">5</span> 中西文盘古之白</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">参考文献</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
 
 
 
@@ -318,7 +354,7 @@ div.csl-indent {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-项目地址
+<span class="screen-reader-only">Tip</span>项目地址
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -682,33 +718,7 @@ Zarrow P, 2012. After Empire: The Conceptual Transformation of the <span>Chinese
       a.appendChild(i);
       window.document.body.appendChild(a);
     }
-    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
-      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
-      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
-      let newTheme = '';
-      if(darkModeDefault) {
-        newTheme = isAlternate ? baseTheme : alternateTheme;
-      } else {
-        newTheme = isAlternate ? alternateTheme : baseTheme;
-      }
-      const changeGiscusTheme = () => {
-        // From: https://github.com/giscus/giscus/issues/336
-        const sendMessage = (message) => {
-          const iframe = document.querySelector('iframe.giscus-frame');
-          if (!iframe) return;
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-        }
-        sendMessage({
-          setConfig: {
-            theme: newTheme
-          }
-        });
-      }
-      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
-      if (isGiscussLoaded) {
-        changeGiscusTheme();
-      }
-    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
