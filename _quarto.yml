@@ -1,16 +1,17 @@
 title: 零碳园区建设方案
+# title: 专报模板
 student-id: 1234567890
 supervisor: 导师姓名
 institute: 所在学校名称
 major: 专业名称
-date-format: "YYYY年M月D日"
+# date-format: "YYYY年M月D日"
 project:
   output-dir: outputs
 # number-sections: true
-link-citations: true
-# toc: true
+link-citations: true  # 不显示参考文献链接可注释掉
+# toc: true  # 取消注释显示目录，默认不显示
 # toc-depth: 4  # `3` is enouth, `4` is set as `shift-heading-level-by: 1` is enabled for html
-toc-title: 目录
+toc-title: 目录  # 目录标题为「目录」
 crossref:
   fig-title: 图
   tbl-title: 表
@@ -18,11 +19,13 @@ crossref:
   tbl-prefix: 表
 reference-section-title: 参考文献
 bibliography: bibliography.bib
-csl: _styles/gb-author-date.csl  # Author-year style, `gb-numeric.csl` for numeric style
+csl: _styles/gb-author-date.csl  # 作者-年份样式
+# csl: _styles/gb-numeric.csl  # 数字样式
 filters:
   - links-to-citations
   - ignore-softbreaks
   - custom-fonts
+  - right-align
 execute:
   cache: true
   freeze: auto
@@ -31,12 +34,13 @@ execute:
 
 format:
   docx:
-    reference-doc: _styles/custom.docx
-    template: _styles/custom.openxml
+    reference-doc: _styles/zhuanbao.docx
+    # reference-doc: _styles/yanjiu.docx
+    # template: _styles/custom.openxml
     filters:
       # - remove-spaces
       - docx-quotes
-    date: today
+    # date: today
 
   html:
     template: _styles/html5.html

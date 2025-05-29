@@ -44,8 +44,7 @@ dependencies:
 
 # `-L _extensions/remove-doi-hyperlinks.lua` can be added to remove DOI hyperlinks
 QUARTO := @quarto render index.qmd --to
-FILTERS := -L _extensions/citation-backlinks.lua \
-	-L _extensions/localize-cnbib.lua \
+FILTERS := -L _extensions/localize-cnbib.lua \
 	-L _extensions/cnbib-quotes.lua \
 	--filter _extensions/sort-cnbib.py
 
@@ -89,4 +88,4 @@ slides: dependencies
 # Clean up generated files
 .PHONY: clean
 clean:
-	@$(RM) -r .quarto .jupyter_cache *_cache *_files _freeze contents/*.qmd cite* outputs
+	@$(RM) -r .quarto .jupyter_cache *_cache *_files _freeze contents/[0-9]*.qmd cite* outputs
