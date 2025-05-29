@@ -89,4 +89,4 @@ slides: dependencies
 # Clean up generated files
 .PHONY: clean
 clean:
-	@$(RM) -r .quarto .jupyter_cache *_cache *_files _freeze contents/*.qmd cite* outputs
+	@$(RM) -r .quarto .jupyter_cache *_cache *_files _freeze contents/[0-9]*.qmd cite* outputs
