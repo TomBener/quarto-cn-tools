@@ -22,7 +22,8 @@ crossref:
   tbl-prefix: 表
 reference-section-title: 参考文献
 bibliography: bibliography.bib
-csl: _styles/gb-author-date.csl  # Author-year style, `gb-numeric.csl` for numeric style
+csl: _styles/gb-author-date.csl  # Author-year style, comment this line and uncomment the following line to use `gb-numeric.csl`
+# csl: _styles/gb-numeric.csl  # Keep in mind to remove `sort-cnbib.py` in `Makefile` if you use `gb-numeric.csl`
 nocite: |
   @*
 filters:
