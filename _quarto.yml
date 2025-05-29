@@ -26,6 +26,7 @@ filters:
   - ignore-softbreaks
   - custom-fonts
   - right-align
+  - header-number
 execute:
   cache: true
   freeze: auto
