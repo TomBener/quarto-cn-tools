@@ -40,6 +40,7 @@ Word 却并不是最适合学术论文写作的工具。
 #| fig-cap: 在 Quarto 中使用 R 绘图
 #| code-fold: true
 #| code-line-numbers: true
+#| label: fig-mtcars
 
 library(ggplot2)
 mtcars2 <- mtcars
