@@ -71,6 +71,7 @@ format:
     include-in-header:
       - _styles/custom.tex
     template-partials:
+      - _styles/hypersetup.latex
       - _styles/title.tex
       - _styles/before-body.tex
       - _styles/toc.tex
