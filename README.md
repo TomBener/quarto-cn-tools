@@ -1,6 +1,6 @@
 # Quarto Template for Chinese Academic Writing
 
-[![Publish](https://github.com/TomBener/quarto-cn-tools/actions/workflows/quarto-publish.yml/badge.svg)](https://github.com/TomBener/quarto-cn-tools/actions/workflows/quarto-publish.yml)
+[![Publish](https://github.com/TomBener/quarto-chinese/actions/workflows/quarto-publish.yml/badge.svg)](https://github.com/TomBener/quarto-chinese/actions/workflows/quarto-publish.yml)
 
 This repository provides a comprehensive guide and toolset for writing academic
 papers in Chinese, such as the localization and sorting of Chinese citations and

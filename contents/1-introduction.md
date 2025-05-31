@@ -1,5 +1,5 @@
 ::: {.callout-tip title="项目地址"}
-<https://github.com/TomBener/quarto-cn-tools>
+<https://github.com/TomBener/quarto-chinese>
 :::
 
 # 前言
