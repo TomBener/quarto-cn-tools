@@ -8,6 +8,8 @@ supervisor: 导师姓名
 institute: 所在学校名称
 major: 专业名称
 date-format: "YYYY年M月D日"
+date: today
+date-modified: today
 project:
   output-dir: outputs
 number-sections: true
@@ -43,12 +45,10 @@ format:
     filters:
       - remove-spaces
       - docx-quotes
-    date: today
 
   html:
     template: _styles/html5.html
     date: 2024-05-26
-    date-modified: today
     theme:
       light: [flatly, _styles/custom.scss]
       dark: [darkly, _styles/custom.scss]
@@ -102,7 +102,6 @@ format:
   epub:
     epub-cover-image: figures/cover.png
     rights: © 2024--Present Tom Ben
-    date: today
 
   revealjs:
     template: _styles/revealjs.html
