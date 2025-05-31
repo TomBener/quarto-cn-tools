@@ -92,9 +92,9 @@ div.csl-indent {
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-09b140d2d032adf2aedb8b099be3ee13.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-eb1f608a8b704a8fa33d6fba04bebd63.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="index_files/libs/bootstrap/bootstrap-dark-48ff194a308142fbe0a02425d12ec4c4.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="index_files/libs/bootstrap/bootstrap-eb1f608a8b704a8fa33d6fba04bebd63.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-288dabb55971a55e91820547b6961879.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="index_files/libs/bootstrap/bootstrap-dark-27b5db258e84d048e0787d4cd1e04187.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="index_files/libs/bootstrap/bootstrap-288dabb55971a55e91820547b6961879.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script src="index_files/libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="index_files/libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="index_files/libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -303,7 +303,7 @@ div.csl-indent {
                 <div>
             <div class="quarto-title-meta-heading">更新于</div>
             <div class="quarto-title-meta-contents">
-              <p class="date-modified">2025 年 5 月 30 日</p>
+              <p class="date-modified">2025 年 5 月 31 日</p>
             </div>
           </div>
                 
@@ -335,6 +335,7 @@ div.csl-indent {
   <li><a href="#中文参考文献按照拼音排序" id="toc-中文参考文献按照拼音排序" class="nav-link" data-scroll-target="#中文参考文献按照拼音排序"><span class="header-section-number">3</span> 中文参考文献按照拼音排序</a></li>
   <li><a href="#中文引号的处理" id="toc-中文引号的处理" class="nav-link" data-scroll-target="#中文引号的处理"><span class="header-section-number">4</span> 中文引号的处理</a></li>
   <li><a href="#中西文盘古之白" id="toc-中西文盘古之白" class="nav-link" data-scroll-target="#中西文盘古之白"><span class="header-section-number">5</span> 中西文盘古之白</a></li>
+  <li><a href="#段落右对齐" id="toc-段落右对齐" class="nav-link" data-scroll-target="#段落右对齐"><span class="header-section-number">6</span> 段落右对齐</a></li>
   <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">参考文献</a></li>
   </ul>
 </nav>
@@ -477,6 +478,29 @@ div.csl-indent {
 <p>本项目提供了一个 Python filter <code>auto-correct.py</code> 来解决这个问题，借助 <a href="https://github.com/huacnlee/autocorrect">AutoCorrect</a> <span id="cite_16"><span class="citation" data-cites="lee2024c">(<a href="#ref-lee2024c" role="doc-biblioref">Lee, 2024</a>)</span></span> 的 Python 库，「自动纠正」或「检查并建议」文案，给 CJK（中文、日语、韩语）与英文混写的场景，补充正确的空格，纠正单词，同时尝试以安全的方式自动纠正标点符号等。</p>
 <p>通过 <code>auto-correct.py</code> filter，可以实现修改 Pandoc AST，在 Pandoc 转换过程中自动纠正中英文、数字之间的空格问题，无需在得到目标格式后再进行修改，特别是对于某些格式（如 EPUB）来说，无法在转换完成后再进行修改，因此这个 filter 的优势就体现出来了。</p>
 <p>需要注意的是，LaTeX 和 Word 会自动处理中英文之间的空格，因此无需使用这个 Python filter，只有在转换为其他格式时才需要使用，例如 HTML、EPUB 等格式。</p>
+</section>
+<section id="段落右对齐" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="段落右对齐"><span class="header-section-number">6</span> 段落右对齐</h2>
+<p>一般而言，段落是左对齐的，但有时我们希望某些段落右对齐。本项目提供了一个Lua filter <code>right-align.lua</code>，可以实现段落右对齐，例如：</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>::: {.right}</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>这段文字会右对齐</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>支持 DOCX、HTML、PDF 和 EPUB 格式。</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>::: {.content-visible when-format="html"}</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>{{&lt; meta date-modified &gt;}}</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>::: {.content-visible unless-format="html"}</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>{{&lt; meta date &gt;}}</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>:::</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>:::</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>生成的效果如下：</p>
+<div style="text-align: right;">
+<p>这段文字会右对齐</p>
+<p>支持 DOCX、HTML、PDF 和 EPUB 格式。</p>
+<p>2025 年 5 月 31 日</p>
+</div>
 </section>
 <section id="bibliography" class="level2 unnumbered">
 
