@@ -7,7 +7,7 @@ Lua filter `right-align.lua`，可以实现段落右对齐，例如：
 ::: {.right}
 这段文字会右对齐
 
-支持 DOCX、HTML、PDF 和 EPUB 格式。
+支持 DOCX、PDF、HTML 和 EPUB 格式。
 
 ::: {.content-visible when-format="html"}
 {{</* meta date-modified */>}}
@@ -24,7 +24,7 @@ Lua filter `right-align.lua`，可以实现段落右对齐，例如：
 ::: {.right}
 这段文字会右对齐
 
-支持 DOCX、HTML、PDF 和 EPUB 格式。
+支持 DOCX、PDF、HTML 和 EPUB 格式。
 
 ::: {.content-visible when-format="html"}
 {{< meta date-modified >}}
