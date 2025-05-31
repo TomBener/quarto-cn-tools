@@ -29,6 +29,7 @@ nocite: |
 filters:
   - links-to-citations
   - ignore-softbreaks
+  - right-align
 execute:
   cache: true
   freeze: auto
