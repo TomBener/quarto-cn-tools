@@ -32,6 +32,7 @@ filters:
   - links-to-citations
   - ignore-softbreaks
   - right-align
+  - custom-fonts
 execute:
   cache: true
   freeze: auto
