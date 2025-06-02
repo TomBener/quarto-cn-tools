@@ -336,6 +336,15 @@ div.csl-indent {
   <li><a href="#中文引号的处理" id="toc-中文引号的处理" class="nav-link" data-scroll-target="#中文引号的处理"><span class="header-section-number">4</span> 中文引号的处理</a></li>
   <li><a href="#中西文盘古之白" id="toc-中西文盘古之白" class="nav-link" data-scroll-target="#中西文盘古之白"><span class="header-section-number">5</span> 中西文盘古之白</a></li>
   <li><a href="#段落右对齐" id="toc-段落右对齐" class="nav-link" data-scroll-target="#段落右对齐"><span class="header-section-number">6</span> 段落右对齐</a></li>
+  <li><a href="#使用自定义字体" id="toc-使用自定义字体" class="nav-link" data-scroll-target="#使用自定义字体"><span class="header-section-number">7</span> 使用自定义字体</a>
+  <ul>
+  <li><a href="#不同格式的实现方式" id="toc-不同格式的实现方式" class="nav-link" data-scroll-target="#不同格式的实现方式"><span class="header-section-number">7.1</span> 不同格式的实现方式</a>
+  <ul class="collapse">
+  <li><a href="#docx-格式" id="toc-docx-格式" class="nav-link" data-scroll-target="#docx-格式"><span class="header-section-number">7.1.1</span> DOCX 格式</a></li>
+  <li><a href="#pdf-格式latex" id="toc-pdf-格式latex" class="nav-link" data-scroll-target="#pdf-格式latex"><span class="header-section-number">7.1.2</span> PDF 格式（LaTeX）</a></li>
+  <li><a href="#html-和-epub-格式" id="toc-html-和-epub-格式" class="nav-link" data-scroll-target="#html-和-epub-格式"><span class="header-section-number">7.1.3</span> HTML 和 EPUB 格式</a></li>
+  </ul></li>
+  </ul></li>
   <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">参考文献</a></li>
   </ul>
 </nav>
@@ -481,7 +490,7 @@ div.csl-indent {
 </section>
 <section id="段落右对齐" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="段落右对齐"><span class="header-section-number">6</span> 段落右对齐</h2>
-<p>一般而言，段落是左对齐的，但有时我们希望某些段落右对齐。本项目提供了一个Lua filter <code>right-align.lua</code>，可以实现段落右对齐，例如：</p>
+<p>一般而言，段落是左对齐的，但有时我们希望某些段落右对齐。本项目提供了一个 Lua filter <code>right-align.lua</code>，可以实现段落右对齐，例如：</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>::: {.right}</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>这段文字会右对齐</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -501,6 +510,51 @@ div.csl-indent {
 <p>支持 DOCX、PDF、HTML 和 EPUB 格式。</p>
 <p>2025 年 6 月 2 日</p>
 </div>
+</section>
+<section id="使用自定义字体" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="使用自定义字体"><span class="header-section-number">7</span> 使用自定义字体</h2>
+<p>在文章的某些段落，或者出于排版需要，或者出于学校要求，我们可能需要使用自定义字体。本项目提供了一个 Lua filter <code>custom-fonts.lua</code>，可以实现在 DOCX、PDF、HTML 和 EPUB 输出中使用自定义字体。</p>
+<p>在 Markdown 中，我们可以使用 <code>{.fangsong}</code> 和 <code>{.kaiti}</code> 类来指定使用自定义字体。例如：</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">这是一段使用仿宋字体的文本</span><span class="co">]</span>{.fangsong}，之后还是使用默认字体。</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">[</span><span class="ot">这是一段使用楷体的文本，</span><span class="co">]</span>{.kaiti}之后还是使用默认字体。</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>生成的效果如下：</p>
+<p><span class="fangsong" style="font-family: FZFangSong-Z02, FangSong, STFangsong, 仿宋, serif;">这是一段使用仿宋字体的文本</span>，之后还是使用默认字体。</p>
+<p><span class="kaiti" style="font-family: FZKai-Z03, KaiTi, STKaiti, 楷体, serif;">这是一段使用楷体的文本</span>，之后还是使用默认字体。</p>
+<section id="不同格式的实现方式" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored" data-anchor-id="不同格式的实现方式"><span class="header-section-number">7.1</span> 不同格式的实现方式</h3>
+<section id="docx-格式" class="level4" data-number="7.1.1">
+<h4 data-number="7.1.1" class="anchored" data-anchor-id="docx-格式"><span class="header-section-number">7.1.1</span> DOCX 格式</h4>
+<p>使用 OpenXML 格式指定特定的中文字体（需安装方正字体，或者替换为其他字体）：</p>
+<ul>
+<li>仿宋：<code>FZFangSong-Z02</code></li>
+<li>楷体：<code>FZKai-Z03</code></li>
+</ul>
+</section>
+<section id="pdf-格式latex" class="level4" data-number="7.1.2">
+<h4 data-number="7.1.2" class="anchored" data-anchor-id="pdf-格式latex"><span class="header-section-number">7.1.2</span> PDF 格式（LaTeX）</h4>
+<p>使用 <code>ctex</code> 宏包提供的字体命令：</p>
+<ul>
+<li>仿宋：<code>\fangsong</code></li>
+<li>楷体：<code>\kaishu</code></li>
+</ul>
+</section>
+<section id="html-和-epub-格式" class="level4" data-number="7.1.3">
+<h4 data-number="7.1.3" class="anchored" data-anchor-id="html-和-epub-格式"><span class="header-section-number">7.1.3</span> HTML 和 EPUB 格式</h4>
+<p>使用 CSS <code>font-family</code> 属性，提供多层字体回退：</p>
+<ul>
+<li>仿宋：<code>FZFangSong-Z02, FangSong, STFangsong, 仿宋, serif</code></li>
+<li>楷体：<code>FZKai-Z03, KaiTi, STKaiti, 楷体, serif</code></li>
+</ul>
+<p>使用 Markdown 类的方式有以下优点：</p>
+<ul>
+<li><strong>格式统一</strong>：在所有输出格式中保持一致的语法</li>
+<li><strong>代码简洁</strong>：无需学习各种格式的特定命令</li>
+<li><strong>维护便利</strong>：一处修改，所有格式同步更新</li>
+<li><strong>跨平台兼容</strong>：提供多种字体回退选项</li>
+</ul>
+</section>
+</section>
 </section>
 <section id="bibliography" class="level2 unnumbered">
 
