@@ -209,7 +209,7 @@ def main():
 
     # Common arguments
     default_bib = os.path.expanduser(
-        "~/Library/CloudStorage/Dropbox/pkm-config/bibliography.bib")
+        "~/Library/CloudStorage/Dropbox/pkm/bibliography.bib")
     default_content_dir = str(project_root / "contents")
 
     # Add command flags instead of subcommands
