@@ -1,3 +1,8 @@
+--- Right align the content of a div
+
+--- Copyright: © 2025–Present Tom Ben
+--- License: MIT License
+
 function Div(el)
     if el.classes:includes("right") then
         if FORMAT == "docx" then
