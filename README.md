@@ -2,6 +2,8 @@
 
 [![Publish](https://github.com/TomBener/quarto-chinese/actions/workflows/quarto-publish.yml/badge.svg)](https://github.com/TomBener/quarto-chinese/actions/workflows/quarto-publish.yml)
 
+[中文介绍](https://sspai.com/post/97056)
+
 This repository provides a comprehensive guide and toolset for writing academic
 papers in Chinese, such as the localization and sorting of Chinese citations and
 bibliographies, conversion of Chinese quotation marks, and correcting spaces between
@@ -19,7 +21,7 @@ formats like Word, HTML, LaTeX, PDF, and EPUB via Quarto.
 - **Extract Bibliographies**: Extract all bibliographies cited in the document as a BibTeX/BibLaTeX file, and copy cited reference files to a specified directory.
 - **Generate Backlinks**: Generate backlinks for bibliography entries to the corresponding citations.
 - **Remove DOI Hyperlinks**: Remove DOI hyperlinks formatted by `citeproc` if they are not needed in the bibliography.
-- **Right Align Text**: Right align text in DOCX, PDF, HTML and EPUB.
+- **Right Align Text**: Right align certain text in DOCX, PDF, HTML and EPUB.
 
 ## Prerequisites
 
@@ -54,10 +56,10 @@ This project uses a [Makefile](Makefile) to manage the build process. Here are t
 - `make citedoc`: Copy cited reference files to a specified directory.
 - `make clean`: Remove auxiliary and output files.
 
-## Tools
+## Extensions
 
 > [!TIP]
-> These tools can also be used individually in your Pandoc or Quarto project.
+> These extensions can also be used individually in your Pandoc or Quarto project.
 
 - [auto-correct](_extensions/auto-correct.py): Improve copywriting, correct spaces, words, and punctuations between CJK and English with AutoCorrect.
 - [citation-backlinks](_extensions/citation-backlinks.lua): Generate backlinks for bibliography entries to the corresponding citations.
@@ -73,7 +75,7 @@ This project uses a [Makefile](Makefile) to manage the build process. Here are t
 - [localize-cnbib](_extensions/localize-cnbib.lua): Localize Chinese bibliographies, change `et al.` to `等` and other English localization strings to Chinese.
 - [remove-doi-hyperlinks](_extensions/remove-doi-hyperlinks.lua): Remove [DOI hyperlinks](https://github.com/jgm/pandoc/issues/10393) formatted by `citeproc` in the bibliography.[^doi]
 - [remove-spaces](_extensions/remove-spaces/): Remove spaces before or after Chinese characters in DOCX.
-- [right-align](_extensions/right-align/): Right align text in DOCX, PDF, HTML and EPUB.
+- [right-align](_extensions/right-align/): Right align certain text in DOCX, PDF, HTML and EPUB.
 - [sort-cnbib](_extensions/sort-cnbib.py): Sort Chinese bibliographies by Pinyin, and can be customized to sort Chinese entries first or last.
 
 ## License
@@ -81,4 +83,4 @@ This project uses a [Makefile](Makefile) to manage the build process. Here are t
 This project is licensed under the MIT License, see the [LICENSE](LICENSE) file for details.
 
 [^bib]: The `get-bib` tool is based on Pandoc, for a better and more flexible implementation, use `citation-tools` instead.
-[^doi]: This tool is disabled by default. To enable it, add `-L _extensions/remove-doi-hyperlinks.lua` to the `FILTERS` variable in the Makefile, and remove `<text variable="DOI" prefix="DOI: "/>` in the CSL file.
+[^doi]: This Lua filter is disabled by default. To enable it, add `-L _extensions/remove-doi-hyperlinks.lua` to the `FILTERS` variable in the Makefile, and remove `<text variable="DOI" prefix="DOI: "/>` in the CSL file.
