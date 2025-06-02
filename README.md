@@ -22,6 +22,7 @@ formats like Word, HTML, LaTeX, PDF, and EPUB via Quarto.
 - **Generate Backlinks**: Generate backlinks for bibliography entries to the corresponding citations.
 - **Remove DOI Hyperlinks**: Remove DOI hyperlinks formatted by `citeproc` if they are not needed in the bibliography.
 - **Right Align Text**: Right align certain text in DOCX, PDF, HTML and EPUB.
+- **Custom Fonts**: Use custom fonts in DOCX, PDF, HTML and EPUB.[^epub]
 
 ## Prerequisites
 
@@ -66,6 +67,7 @@ This project uses a [Makefile](Makefile) to manage the build process. Here are t
 - [citation-tools](_extensions/citation-tools.py): Extract citation keys from Markdown files, and copy cited reference files to a specified directory.
 - [confetti](_extensions/confetti/): Send some 🎊 in Reveal.js slides.
 - [cnbib-quotes](_extensions/cnbib-quotes.lua): Process quotes for Chinese bibliographies in HTML and EPUB outputs.
+- [custom-fonts](_extensions/custom-fonts/): Use custom fonts in DOCX, PDF, HTML and EPUB.
 - [docx-quotes](_extensions/docx-quotes/): Convert straight angle quotation marks to curly quotation marks in DOCX.
 - [format-md](_extensions/format-md.py): Preprocess Markdown files for conversion with Quarto.
 - [get-bib](_extensions/get-bib.lua): Extract all bibliographies cited in the document as a BibLaTeX file.[^bib]
@@ -84,3 +86,4 @@ This project is licensed under the MIT License, see the [LICENSE](LICENSE) file 
 
 [^bib]: The `get-bib` tool is based on Pandoc, for a better and more flexible implementation, use `citation-tools` instead.
 [^doi]: This Lua filter is disabled by default. To enable it, add `-L _extensions/remove-doi-hyperlinks.lua` to the `FILTERS` variable in the Makefile, and remove `<text variable="DOI" prefix="DOI: "/>` in the CSL file.
+[^epub]: Note that EPUB readers may override the font settings based on user preferences.
