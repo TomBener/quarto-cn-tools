@@ -15,7 +15,7 @@ project:
 number-sections: true
 link-citations: true
 toc: true
-toc-depth: 4  # `3` is enouth, `4` is set as `shift-heading-level-by: 1` is enabled for html
+toc-depth: 4  # `3` is enough, `4` is set as `shift-heading-level-by: 1` is enabled for html
 toc-title: 目录
 crossref:
   fig-title: 图
@@ -38,6 +38,7 @@ execute:
   freeze: auto
   echo: true
   warning: false
+fig-dpi: 300
 
 format:
   docx:
@@ -78,7 +79,7 @@ format:
       - _styles/before-body.tex
       - _styles/toc.tex
       - _styles/biblio.tex
-    pdf-engine: xelatex
+    pdf-engine: xelatex  # The default engine has been changed to `lualatex` since Quarto 1.8.10
     indent: true
     papersize: a4
     twoside: true
